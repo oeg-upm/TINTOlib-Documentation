@@ -62,7 +62,7 @@ The default parameter are the following:
 Data2Image is available under the **[Apache License 2.0](https://github.com/manwestc/TINTO/blob/main/LICENSE)**.
 
 ## Authors
-
+- **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
 - **[Manuel Castillo-Cara](https://github.com/manwestc) - [jcastillo@fi.upm.es](mailto:jcastillo@fi.upm.es)**
 - **[Raúl García-Castro](https://github.com/rgcmme)**
 
