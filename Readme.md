@@ -8,8 +8,9 @@
 
 **Data2Image** is a state-of-the-art library that wraps the most important techniques for the construction of **Synthetic Images** from [Sorted Data](https://www.jstatsoft.org/article/view/v059i10) (also known as **Tabular Data**). 
 
-## Main Features
-
+## Features
+- Input data formats:
+--CSV
 - Runs on **Linux**, **Windows** and **macOS** systems.
 - Compatible with **[Python](https://www.python.org/)** 3.7 or higher.
 
