@@ -37,12 +37,8 @@
 - Runs on **Linux**, **Windows** and **macOS** systems.
 - Compatible with **[Python](https://www.python.org/)** 3.7 or higher.
 
-## Video Documentation
 
-https://user-images.githubusercontent.com/102165947/217485660-ca7e936a-e9bb-48a3-aaa4-3ba003bac36d.mp4
-
-
-<!--- **[Read the documentation](https://readthedocs.io/en/latest/documentation/)**. -->
+**[Read the documentation](https://readthedocs.io/en/latest/documentation/)**.
 
 ## Getting Started
 
