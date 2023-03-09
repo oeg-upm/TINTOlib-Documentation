@@ -13,6 +13,9 @@
 - Runs on **Linux**, **Windows** and **macOS** systems.
 - Compatible with **[Python](https://www.python.org/)** 3.7 or higher.
 
+## Methods
+
+- **[TINTO](https://github.com/oeg-upm/TINTO)**.
 
 ## Getting Started
 
