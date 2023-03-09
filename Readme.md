@@ -41,21 +41,6 @@ To run the engine via **command line** and see all the **arguments** you just ne
     python tinto.py -h
 ```
 
-![Help](https://github.com/manwestc/TINTO/blob/main/imgs/tinto_help.png)
-
-The default parameter are the following:
-- **Dimensional Reduction Algorithm (-alg)**: Select the dimensionality reduction algorithm to be used for image creation. The [PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA)** or [*t*-SNE](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) algorithms can be chosen. By default, use the [PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA)** algorithm.
-- **Image size (-px)**: 20x20 pixels
-- **Blurring (-B)**: for default is False, i.e., it do not use Blurring technique and create de images with characteristic pixels
-- **Amplification (-aB)**: Only if Blurring is True. It is the blurring amplification and for default is PI number, i.e., 3.141592653589793 aprox.
-- **Blurring distance (-dB)**: Only if Blurring is True. It is Blurring distance and for default is 0.1 (10%).
-- **Blurring steps (-sB)**: Only if Blurring is True. It is Blurring steps and for default is 4, i.e., expand 4 pixels the blurring.
-- **Blurring option (-oB)**: Only if Blurring is True. It is the Blurring option and for default is _mean_, i.e., if two pixels are overlaping, calculate the average number of this two overlaping pixels.
-- **Save Configuration (-sC)**: Save the configurarion in a pikle object. It is False for default.
-- **Load Configuration (-lC)**: Load the configurarion in a pikle object. It is False for default.
-- **Seed (-sd)**: Set a seed for the random numbers. It is 20 for default.
-- **_t_SNE times replication (-tt)**: It is only used when _t_-SNE is used. It is _t_-SNE times replication and for defaultd is 4.
-- **Verbose (-v)**. Show in terminal the execution. For default is False.
 
 ## License
 
