@@ -14,7 +14,7 @@ Contents
 
 .. toctree::
 
-   tinto
+   
    installation
    dataformat
-   methods
+   tinto
