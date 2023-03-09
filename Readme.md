@@ -23,6 +23,9 @@
 
 - **[TINTO](https://github.com/oeg-upm/TINTO)**.
 
+## Documentation
+
+[Read the documentation]("https://documentationtinto.readthedocs.io/en/latest/").
 ## Getting Started
 
 **[TINTO](https://github.com/oeg-upm/TINTO)** is easy to use in terminal:
