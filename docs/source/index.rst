@@ -12,7 +12,7 @@ Welcome to Data2Image's documentation!
 Contents
 -----------
 
-..toctree::
+.. toctree::
 
    usage
    api
