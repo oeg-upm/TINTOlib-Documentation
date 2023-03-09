@@ -18,3 +18,8 @@ Citation
         doi = {https://doi.org/10.1016/j.inffus.2022.10.011}
     }
 
+To use Lumache, first install it using pip:
+
+.. code-block:: console
+
+   (.venv) $ pip install lumache
