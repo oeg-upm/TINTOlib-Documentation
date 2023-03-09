@@ -38,7 +38,7 @@
 
 You can import the library using: 
 ```
-    from tinto_prueba.methods import tinto
+    import tinto_prueba.methods
 ```
 
 
