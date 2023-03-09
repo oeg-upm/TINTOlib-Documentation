@@ -32,13 +32,13 @@
 **You can install Data2Image using [Pypi(test)](https://pypi.org/project/tintonera-prueba/)**:
 
 ```
-    pip install -r requirements.txt
+    pip install tintonera-prueba
 ```
 
 
-To run the engine via **command line** and see all the **arguments** you just need to execute the following:
+You can import the library using: 
 ```
-    python tinto.py -h
+    from tinto_prueba.methods import tinto
 ```
 
 
