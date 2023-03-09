@@ -26,11 +26,11 @@
 ## Documentation
 
 **[Read the documentation](https://documentationtinto.readthedocs.io/en/latest/)**.
+
 ## Getting Started
 
-**[TINTO](https://github.com/oeg-upm/TINTO)** is easy to use in terminal:
+**You can install Data2Image using [Pypi(test)](https://pypi.org/project/tintonera-prueba/)**:
 
-Fist, it is important to install all previus libraries
 ```
     pip install -r requirements.txt
 ```
