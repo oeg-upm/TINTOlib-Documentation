@@ -28,5 +28,8 @@ To import the Tabular Data there are 2 options:
 
 Output Format
 -------------
+The output of the model.generateImages() method are synthetic images grouped in folders depending on their class value. 
 
+For example: 
+If the dataset is composed of 3 different classes, the model.generateImages() method will create 3 folders and each folder will contain one synthetic image for each instance with that class. 
 
