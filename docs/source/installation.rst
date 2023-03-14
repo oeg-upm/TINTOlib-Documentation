@@ -24,13 +24,13 @@ Input Format
 To import the Tabular Data there are 2 options:
 
 * Use raw CSV path
-#. Step 1. Example:
+* Step 1. Example:
 
     .. code-block:: bash
 
       Example code
 
-#. Step 2.
+* Step 2.
 
 * Use Pandas Dataframe instance with the data
 
