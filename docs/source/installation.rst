@@ -34,7 +34,7 @@ Available Models
    * - TINTO
      - tinto
      - blur
-     - j
+     - 
      
 Input Format
 ------------
