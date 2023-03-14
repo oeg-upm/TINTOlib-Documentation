@@ -11,6 +11,14 @@ Hyperparameters & Configuration
      - Description
      - Default
      - Valid values
+   * - :py:data:`data`
+     - 
+     - Nan
+     - Pandas Datagrame or CSV path
+   * - :py:data:`folder`
+     - 
+     - Nan
+     - Path
    * - :py:data:`algorithm`
      - Dimensionality reduction algorithm
      - PCA
