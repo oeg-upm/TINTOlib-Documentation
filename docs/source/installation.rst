@@ -26,13 +26,16 @@ To import the Tabular Data there are 2 options:
 
 Raw CSV path
 #######
-* Step 1. Example:
+Raw CSV path can be used with X method . The CSV file must have the following format:
 
-    .. code-block:: bash
+*Data must be in CSV with the default separator, i.e., commas.
+*Only create images when we have data for a binary or multi-class classification problem.
+*The last column should be the targer (variable to predict).
+*The first columns will be the characteristics.
+*All variables must be in numerical format.
+*The script takes by default the first row as the name of each feature, therefore, the different features must be named.
+*Each sample (row) of the dataset will correspond to an image.
 
-      Example code
-
-* Step 2.
 
 Pandas Dataframe
 ###############
