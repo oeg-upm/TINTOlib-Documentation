@@ -30,9 +30,11 @@ Available Models
    * - Method
      - Class name
      - Features
+     - Hyperparameters
    * - TINTO
      - tinto
      - blur
+     - 
      
 Input Format
 ------------
