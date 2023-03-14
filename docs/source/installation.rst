@@ -23,7 +23,9 @@ Input Format
 ------------
 To import the Tabular Data there are 2 options:
 
-* Use raw CSV path
+
+Raw CSV path
+#######
 * Step 1. Example:
 
     .. code-block:: bash
@@ -32,10 +34,16 @@ To import the Tabular Data there are 2 options:
 
 * Step 2.
 
-* Use Pandas Dataframe instance with the data
+Pandas Dataframe
+###############
+* Step 1. Example:
 
-HEading 
-#######
+    .. code-block:: bash
+
+      Example code
+
+* Step 2.
+
 Output Format
 -------------
 The output of the :py:func:`model.generateImages()` method are synthetic images grouped in folders depending on their class value. 
