@@ -64,6 +64,8 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - [True, False]
 
 
+
+
 Code example:
 
 >>> model = tinto(algorithm="t-SNE",pixels=30,blur=True,option="maximum")
@@ -86,7 +88,8 @@ Functions
 
    * - :py:data:`loadHyperparameters(filename)`
      - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
-     - 
+        - filename: .pkl file path
+     -
    * - :py:data:`generateImages(data, folder)`
      - Generate one image per instance and group by class in different folder
         - data: path of the CSV or pandas dataframe
