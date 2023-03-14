@@ -12,22 +12,20 @@ To use Data2Image, first install it using `PyPi <https://pypi.org/project/tinton
 
    (.venv) $ pip install tintonera-prueba
 
-Creating recipes
+Importing methods
 ----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
+Data2Image contains state-of-the-art most important techniques for the construction of Synthetic Images from Sorted Data (also known as Tabular Data). All the methods requires the same input format and the responses outputs will have the same format.
 .. autoexception:: lumache.InvalidKindError
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> from tinto_prueba.methods import tinto
+
+
+Input Format
+------------
+
+Output Format
+-------------
+
+
