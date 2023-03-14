@@ -23,8 +23,9 @@ Input Format
 ------------
 To import the Tabular Data there are 2 options:
 - Using raw CSV path
+==============
 - Pandas Dataframe instance
-
+============
 Output Format
 -------------
 
