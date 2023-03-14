@@ -22,9 +22,9 @@ Data2Image contains state-of-the-art most important methods for the construction
 Input Format
 ------------
 To import the Tabular Data there are 2 options:
-* Using raw CSV path
 
-* Pandas Dataframe instance
+* Use raw CSV path
+* Use Pandas Dataframe instance with the data
 
 Output Format
 -------------
