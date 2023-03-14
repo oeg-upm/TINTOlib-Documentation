@@ -6,11 +6,11 @@ Installation
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use Data2Image, first install it using `PyPi <https://pypi.org/project/tintonera-prueba/>`_:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install tintonera-prueba
 
 Creating recipes
 ----------------
