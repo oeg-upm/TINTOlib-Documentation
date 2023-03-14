@@ -28,7 +28,7 @@ Available Models
    :header-rows: 1
 
    * - Method
-     - Import class
+     - Class name
      - Features
    * - TINTO
      - tinto
