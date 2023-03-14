@@ -7,18 +7,6 @@ Hyperparameters & Configuration
    :widths: 20 40 20 20
    :header-rows: 1
 
-   * - Parameter
-     - Description
-     - Default
-     - Valid values
-   * - :py:data:`data`
-     - 
-     - Nan
-     - Pandas Dataframe or CSV path
-   * - :py:data:`folder`
-     - 
-     - Nan
-     - Path
    * - :py:data:`algorithm`
      - Dimensionality reduction algorithm
      - PCA
@@ -71,16 +59,18 @@ Functions
      - Description
      - Output
      
-   * - :py:func:`saveHyperparameters(filename)`
+   * - :py:data:`saveHyperparameters(filename)`
      - Allows to save the defined parameters (algorithm, pixels, blur....). 
      - .pkl file with the configuration
 
-   * - :py:func:`loadHyperparameters`
+   * - :py:data:`loadHyperparameters(filename)`
+     - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
      - 
-     - 
-   * - :py:func:`generateImages`
-     - 
-     - 
+   * - :py:data:`generateImages(data, folder)`
+     - Generate one image per instance and group by class in different folder
+        - data: path of the CSV or pandas dataframe
+        - folder: path of the folder to save results
+     - Folders with synthetic images
 
 
 
