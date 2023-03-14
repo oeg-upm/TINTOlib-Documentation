@@ -14,7 +14,7 @@ Hyperparameters & Configuration
    * - :py:data:`data`
      - 
      - Nan
-     - Pandas Datagrame or CSV path
+     - Pandas Dataframe or CSV path
    * - :py:data:`folder`
      - 
      - Nan
@@ -71,9 +71,9 @@ Functions
      - Description
      - Output
      
-   * - :py:func:`saveHyperparameters`
-     - 
-     - 
+   * - :py:func:`saveHyperparameters(filename)`
+     - Allows to save the defined parameters (algorithm, pixels, blur....). 
+     - .pkl file with the configuration
 
    * - :py:func:`loadHyperparameters`
      - 
