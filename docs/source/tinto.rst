@@ -1,6 +1,21 @@
 TINTO
 =====
 
+Hyperparameters
+---------------
+.. list-table:: 
+   :widths: 20 40 20 20
+   :header-rows: 1
+
+   * - Hyperparameter
+     - Description
+     - Default
+     - Valid values
+   * - 
+     -
+     -
+     -
+  
 
 Citation
 ------
