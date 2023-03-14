@@ -15,9 +15,6 @@ To use Data2Image, first install it using `PyPi <https://pypi.org/project/tinton
 Import methods
 ----------------
 Data2Image contains state-of-the-art most important methods for the construction of Synthetic Images from Sorted Data (also known as Tabular Data). All the methods requires the same input format and the responses outputs will have the same format.
-.. autoexception:: lumache.InvalidKindError
-
-For example:
 
 >>> from tinto_prueba.methods import tinto
 
