@@ -11,8 +11,8 @@ Hyperparameters
      - Description
      - Default
      - Valid values
-   * - 
-     -
+   * - :py:func:`algo`
+     - :py:data:`algo`
      -
      -
   
