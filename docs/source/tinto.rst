@@ -12,51 +12,49 @@ Hyperparameters & Configuration
      - Default
      - Valid values
    * - :py:data:`algorithm`
-     - 
-     -
-     -
+     - Dimensionality reduction algorithm
+     - PCA
+     - [PCA, t-SNE]
    * - :py:data:`pixels`
-     - 
-     -
-     -
+     - Image's Pixels (one side)
+     - 20
+     - *
    * - :py:data:`blur`
-     - 
-     -
-     -
+     - Active option blurring
+     - False
+     - [True, False]
    * - :py:data:`amplification`
-     - 
-     -
-     -
+     - Amplification in blurring
+     - :py:data:`np.pi`
+     - *
    * - :py:data:`distance`
-     - 
-     -
-     -
+     - Distance in blurring (number of pixels)
+     - 2
+     - *
    * - :py:data:`steps`
-     - 
-     -
-     -
+     - Steps in blurring
+     - 4
+     - *
    * - :py:data:`option`
-     - 
-     -
-     -
-   * - :py:data:`steps`
-     - 
-     -
-     -
+     - Option in blurring
+     - mean
+     - [mean, maximum]
    * - :py:data:`seed`
-     - 
-     -
-     -
+     - Seed
+     - 20
+     - *
    * - :py:data:`times`
-     - 
-     -
-     -
+     - Times replication in t-SNE
+     - 4
+     - *
    * - :py:data:`verbose`
-     - 
-     -
-     -
+     - Verbose: if it's true, show the compilation text
+     - False
+     - [True, False]
 
   
+Functions
+---------
 
 Citation
 ------
