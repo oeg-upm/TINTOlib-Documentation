@@ -23,7 +23,7 @@ All the methods requires the same input format and the responses outputs will ha
 
 Available Models
 --------------
-.. list-table:: Title
+.. list-table:: 
    :widths: 25 25 50
    :header-rows: 1
 
