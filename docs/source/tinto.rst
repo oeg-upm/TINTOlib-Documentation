@@ -1,54 +1,75 @@
 TINTO
 =====
 
+Import TINTO
+----------------
+To import TINTO model use:
+
+>>> from tinto_prueba.methods import tinto
+>>> model = tinto()
+
 Hyperparameters & Configuration
 ---------------
+
+When creating the :py:class:`tinto` class, some parameters can be modified. The parameters are:
+
+
 .. list-table:: 
    :widths: 20 40 20 20
    :header-rows: 1
 
+   * - Parameters
+     - Description
+     - Default value
+     - Valid values
    * - :py:data:`algorithm`
-     - Dimensionality reduction algorithm
+     - Select the dimensionality reduction algorithm between the options
      - PCA
      - [PCA, t-SNE]
    * - :py:data:`pixels`
-     - Image's Pixels (one side)
+     - The number of pixels used to create the image (only one side, total_pixels = pixels * pixels)
      - 20
      - integer
    * - :py:data:`blur`
-     - Active option blurring
+     - Activate or deactivate the blurring option
      - False
      - [True, False]
    * - :py:data:`amplification`
-     - Amplification in blurring
+     - Only with :py:data:`blur=true`, blurring amplification
      - :py:data:`np.pi`
      - float
    * - :py:data:`distance`
-     - Distance in blurring (number of pixels)
+     - Only with :py:data:`blur=true`, blurring distance (number of pixels)
      - 2
      - integer
    * - :py:data:`steps`
-     - Steps in blurring
+     - Only with :py:data:`blur=true`, blurring steps
      - 4
      - integer
    * - :py:data:`option`
-     - Option in blurring
+     - Only with :py:data:`blur=true`, technique for handling overlapping pixels
      - mean
      - [mean, maximum]
    * - :py:data:`seed`
-     - Seed
+     - Seed for the random numbers used in the method
      - 20
      - integer
    * - :py:data:`times`
-     - Times replication in t-SNE
+     - Only with :py:data:`algorithm=t-SNE`, times replication in t-SNE
      - 4
      - integer
    * - :py:data:`verbose`
-     - Verbose: if it's true, show the compilation text
+     - Show in terminal the execution
      - False
      - [True, False]
 
-  
+
+Code example:
+
+>>> model = tinto(algorithm="t-SNE",pixels=30,blur=True,option="maximum")
+
+All the parameters that aren't expecifically setted will have their default values.
+
 Functions
 ---------
 .. list-table:: 
