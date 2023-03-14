@@ -55,6 +55,26 @@ Hyperparameters & Configuration
   
 Functions
 ---------
+.. list-table:: 
+   :widths: 20 40 20 
+   :header-rows: 1
+
+   * - Function
+     - Description
+     - Output
+     
+   * - :py:func:`saveHyperparameters`
+     - 
+     - 
+
+   * - :py:func:`loadHyperparameters`
+     - 
+     - 
+   * - :py:func:`generateImages`
+     - 
+     - 
+
+
 
 Citation
 ------
