@@ -23,7 +23,20 @@ All the methods requires the same input format and the responses outputs will ha
 
 Available Models
 --------------
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
 
+   * - Heading row 1, column 1
+     - Heading row 1, column 2
+     - Heading row 1, column 3
+   * - Row 1, column 1
+     -
+     - Row 1, column 3
+   * - Row 2, column 1
+     - Row 2, column 2
+     - Row 2, column 3
+     
 Input Format
 ------------
 To import the Tabular Data there are 2 options:
