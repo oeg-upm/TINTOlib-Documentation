@@ -34,6 +34,8 @@ To import the Tabular Data there are 2 options:
 
 * Use Pandas Dataframe instance with the data
 
+HEading 
+#######
 Output Format
 -------------
 The output of the :py:func:`model.generateImages()` method are synthetic images grouped in folders depending on their class value. 
