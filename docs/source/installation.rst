@@ -32,10 +32,7 @@ Available Models
      - Features
    * - TINTO
      - tinto
-     - Row 1, column 3
-   * - Row 2, column 1
-     - Row 2, column 2
-     - Row 2, column 3
+     - blur
      
 Input Format
 ------------
