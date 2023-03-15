@@ -90,7 +90,6 @@ Functions
      - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
-     -
    * - :py:data:`generateImages(data, folder)`
      - Generate one image per instance and group by class in different folder
 
