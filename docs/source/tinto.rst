@@ -5,7 +5,7 @@ Import TINTO
 ----------------
 To import TINTO model use:
 
->>> from tinto_prueba.methods import tinto
+>>> from data2Image.models import tinto
 >>> model = tinto()
 
 Hyperparameters & Configuration
@@ -88,10 +88,12 @@ Functions
 
    * - :py:data:`loadHyperparameters(filename)`
      - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
+
         - filename: .pkl file path
      -
    * - :py:data:`generateImages(data, folder)`
      - Generate one image per instance and group by class in different folder
+
         - data: path of the CSV or pandas dataframe
         - folder: path of the folder to save results
      - Folders with synthetic images
