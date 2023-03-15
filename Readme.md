@@ -30,7 +30,7 @@
 
 ## Getting Started
 
-**You can install Data2Image using [Pypi(test)](https://pypi.org/project/tintonera-prueba/)**:
+**You can install Data2Image using [Pypi(test)](https://pypi.org/project/data2image-alpha/)**:
 
 ```
     pip install data2image-alpha
