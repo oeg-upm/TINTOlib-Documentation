@@ -74,6 +74,7 @@ All the parameters that aren't expecifically setted will have their default valu
 
 Functions
 ---------
+
 .. list-table:: 
    :widths: 20 40 20 
    :header-rows: 1
