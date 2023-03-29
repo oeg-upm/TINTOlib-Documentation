@@ -32,10 +32,18 @@ Available Models
      - Features
      - Hyperparameters
    * - TINTO
-     - tinto
+     - TINTO()
      - blur
      - `algorithm`, `pixels`, `blur`, `amplification`, `distance`, `steps`, `option`, `seed`, `times`, `verbose`
-     
+   * - SuperTML
+     - SuperTML()
+     -
+     - `problem`, `verbose`
+   * - IGTD
+     - IGTD()
+     -
+     -  `problem`, `scale`, `fea_dost_method`, `save_image_size`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `seed`, `verbose`
+
 Input Format
 ------------
 To import the Tabular Data there are 2 options:
