@@ -5,8 +5,8 @@ Import TINTO
 ----------------
 To import TINTO model use:
 
->>> from data2Image.models import tinto
->>> model = tinto()
+>>> from data2Image.tinto import TINTO
+>>> model = TINTO()
 
 Hyperparameters & Configuration
 ---------------
@@ -22,6 +22,10 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - Description
      - Default value
      - Valid values
+   * - :py:data:`problem`
+     -  The type of problem, this will define how the images are grouped.
+     -  'supervised'
+     - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`algorithm`
      - Select the dimensionality reduction algorithm between the options
      - PCA
@@ -68,29 +72,28 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
 
 Code example:
 
->>> model = tinto(algorithm="t-SNE",pixels=30,blur=True,option="maximum")
+>>> model = TINTO(algorithm="t-SNE",pixels=30,blur=True,option="maximum")
 
 All the parameters that aren't expecifically setted will have their default values.
 
 Functions
 ---------
 
-.. list-table:: 
-   :widths: 20 40 20 
+.. list-table::
+   :widths: 20 60 20
    :header-rows: 1
 
    * - Function
      - Description
      - Output
-     
    * - :py:data:`saveHyperparameters(filename)`
-     - Allows to save the defined parameters (algorithm, pixels, blur....). 
-     - .pkl file with the configuration
-
+     -  Allows to save the defined parameters (scale, fea_dost_method, image_dist_method....).
+     -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
      - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
+     -
    * - :py:data:`generateImages(data, folder)`
      - Generate one image per instance and group by class in different folder
 

@@ -1,9 +1,9 @@
-TINTO
+IGTD
 =====
 
-Import TINTO
+Import IGTD
 ----------------
-To import TINTO model use:
+To import IGTD model use:
 
 >>> from data2Image.igtd import IGTD
 >>> model = IGTD()
@@ -95,7 +95,7 @@ IGTD has the following functions:
      -  Allows to save the defined parameters (scale, fea_dost_method, image_dist_method....).
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load IGTD configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
