@@ -20,10 +20,11 @@
 
 ## Models
 
-|                    Model                     |    Class     | Features |                                          Hyperparameters                                          |
-|:--------------------------------------------:|:------------:|:--------:|:-------------------------------------------------------------------------------------------------:|
-|  [TINTO](https://github.com/oeg-upm/TINTO)   |  `tinto()`   |  `blur`  | `algorithm` `pixels` `blur` `amplification` `distance` `steps` `option` `seed` `times` `verbose`  |
-| [SuperTML](https://github.com/GilesStrong/SuperTML_HiggsML_Test) | `SuperTML()` |          |   `verbose`  |
+|                              Model                               |    Class     | Features |                                                      Hyperparameters                                                       |
+|:----------------------------------------------------------------:|:------------:|:--------:|:--------------------------------------------------------------------------------------------------------------------------:|
+|            [TINTO](https://github.com/oeg-upm/TINTO)             |  `tinto()`   |  `blur`  |         `problem` `algorithm` `pixels` `blur` `amplification` `distance` `steps` `option` `seed` `times` `verbose`         |
+| [SuperTML](https://github.com/GilesStrong/SuperTML_HiggsML_Test) | `SuperTML()` |          |                                                    `problem` `verbose`                                                     |
+|   [IGTD](https://github.com/zhuyitan/igtd)   |   `IGTD()`   |          | `problem` `scale` `fea_dost_method` `save_image_size` `max_step` `val_step` `error` `switch_t` `min_gain` `seed` `verbose` |
 
 ## Documentation
 

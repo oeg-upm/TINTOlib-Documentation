@@ -3,9 +3,9 @@ TINTO
 
 Import SuperTML
 ----------------
-To import TINTO model use:
+To import SuperTML model use:
 
->>> from data2Image.models import SuperTML
+>>> from data2Image.supertml import SuperTML
 >>> model = SuperTML()
 
 Hyperparameters & Configuration
