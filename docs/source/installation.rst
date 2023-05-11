@@ -17,7 +17,7 @@ Import methods
 TINTOlib contains state-of-the-art most important methods for the construction of Synthetic Images from Sorted Data (also known as Tabular Data). The following code can be used to import the desired model:
 
 >>> from TINTOlib.tinto import TINTO
-
+>>> from TINTOlib.igtd import IGTD
 
 All the methods requires the same input format and the responses outputs will have the same format.
 
