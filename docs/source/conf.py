@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Data2Image'
+project = 'TINTOlib'
 copyright = '2023, Borja Reinoso'
 author = 'Borja Reinoso'
 

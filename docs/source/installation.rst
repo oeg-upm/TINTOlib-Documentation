@@ -6,17 +6,17 @@ Introduction
 Installation
 ------------
 
-To use Data2Image, first install it using `PyPi <https://pypi.org/project/data2image-alpha/0.0.1/>`_:
+To use TINTOlib, first install it using `PyPi <https://pypi.org/project/TINTOlib>`_:
 
 .. code-block:: console
 
-   (.venv) $ pip install data2image-alpha
+   (.venv) $ pip install TINTOlib
 
 Import methods
 ----------------
-Data2Image contains state-of-the-art most important methods for the construction of Synthetic Images from Sorted Data (also known as Tabular Data). The following code can be used to import the desired model:
+TINTOlib contains state-of-the-art most important methods for the construction of Synthetic Images from Sorted Data (also known as Tabular Data). The following code can be used to import the desired model:
 
->>> from data2Image.models import tinto
+>>> from TINTOlib.tinto import TINTO
 
 
 All the methods requires the same input format and the responses outputs will have the same format.
@@ -65,8 +65,8 @@ Code example
     .. code-block:: bash
 
 
-      model=tinto()
-      tinto.generateImages(CsvPath,resultFolderPath)
+      model=TINTO()
+      model.generateImages(CsvPath,resultFolderPath)
 Pandas Dataframe
 ###############
 Pandas dataframe format can be also used to load the data:
@@ -75,8 +75,8 @@ Code example
     .. code-block:: bash
 
       pandasDf=pd.read_csv(dataPath)
-      model=tinto()
-      tinto.generateImages(pandasDf,resultFolderPath)
+      model=TINTO()
+      model.generateImages(pandasDf,resultFolderPath)
 
 
 Output Format
