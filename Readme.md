@@ -32,11 +32,11 @@
 
 ## Documentation
 
-**[Read the documentation](https://data2image.readthedocs.io/en/latest/)**.
+**[Read the documentation](https://tintolib.readthedocs.io/en/latest/)**.
 
 ## Getting Started
 
-**You can install Data2Image using [Pypi(test)](https://pypi.org/project/data2image-alpha/)**:
+**You can install TINTOlib using [Pypi](https://pypi.org/project/TINTOlib/)**:
 
 ```
     pip install TINTOlib
@@ -48,9 +48,9 @@ To import a specific model use
     from TINTOlib.tinto import TINTO
 ```
 
-Create the model. If you don't set any hyperparameter, the model will use the default values ([read documentation](https://data2image.readthedocs.io/en/latest/)).
+Create the model. If you don't set any hyperparameter, the model will use the default values ([read documentation](https://tintolib.readthedocs.io/en/latest/)).
 ````
-    model = tinto(blur=True)
+    model = TINTO(blur=True)
 ````
 To generate the synthetic images use ``.genereateImages(data,folder)`` method.
 ````
@@ -59,7 +59,7 @@ To generate the synthetic images use ``.genereateImages(data,folder)`` method.
 
 ## License
 
-Data2Image is available under the **[Apache License 2.0](https://github.com/BorjaRei/Data2Image/blob/main/LICENSE)**.
+TINTOlib is available under the **[Apache License 2.0](https://github.com/BorjaRei/Data2Image/blob/main/LICENSE)**.
 
 ## Authors
 - **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
