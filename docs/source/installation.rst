@@ -24,27 +24,41 @@ All the methods requires the same input format and the responses outputs will ha
 Available Models
 --------------
 .. list-table:: 
-   :widths: 50 50 50
+   :widths: 50 50 50 100
    :header-rows: 1
 
    * - Method
      - Class name
+     -
      - Hyperparameters
    * - TINTO
      - TINTO()
      - blur
-     - `algorithm`, `pixels`, `blur`, `amplification`, `distance`, `steps`, `option`, `seed`, `times`, `verbose`
+     - `algorithm`, `pixels`, `blur`, `amplification`, `distance`, `steps`, `option`, `seed`, `times`,`submatrix`, `verbose`
    * - SuperTML
      - SuperTML()
+     -
      - `problem`, `verbose`
    * - IGTD
      - IGTD()
-     - `problem`, `scale`, `fea_dost_method`, `save_image_size`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `seed`, `verbose`
+     -
+     -  `problem`, `scale`, `fea_dost_method`, `save_image_size`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `seed`, `verbose`
    * - REFINED
      - REFINED()
-     - `problem`, `verbose`
-
-
+     -
+     - `problem`, `hcIterations`, `verbose`
+   * - BarGraph
+     - BarGraph()
+     -
+     - `problem`, `pixel_width`, `gap`, `verbose`
+   * - DistanceMatrix
+     - DistanceMatrix()
+     -
+     - `problem`, `scale`, `verbose`
+   * - Combination
+     - Combination()
+     -
+     - `problem`, `pixel_width`, `gap`, `verbose`
 Input Format
 ------------
 To import the Tabular Data there are 2 options:
