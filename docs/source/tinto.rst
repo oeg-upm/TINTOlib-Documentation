@@ -5,7 +5,7 @@ Import TINTO
 ----------------
 To import TINTO model use:
 
->>> from data2Image.tinto import TINTO
+>>> from TINTOlib.tinto import TINTO
 >>> model = TINTO()
 
 Hyperparameters & Configuration
@@ -37,7 +37,7 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
    * - :py:data:`blur`
      - Activate or deactivate the blurring option
      - False
-     - [True, False]
+     - boolean
    * - :py:data:`amplification`
      - Only with :py:data:`blur=true`, blurring amplification
      - :py:data:`np.pi`
@@ -62,10 +62,14 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - Only with :py:data:`algorithm=t-SNE`, times replication in t-SNE
      - 4
      - integer
+   * - :py:data:`submatrix`
+     - Use submatrix in the algorithm or not
+     - True
+     - boolean
    * - :py:data:`verbose`
      - Show in terminal the execution
      - False
-     - [True, False]
+     - boolean
 
 
 
@@ -105,7 +109,7 @@ Functions
 
 Citation
 ------
-**Paper**: https://doi.org/10.1016/j.inffus.2022.10.011
+**Paper**: https://doi.org/10.1016/j.inffus.2022.10.011 and https://doi.org/10.1016/j.softx.2023.101391
 
 **Code Repository**: https://github.com/oeg-upm/TINTO
 
