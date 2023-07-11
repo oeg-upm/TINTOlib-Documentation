@@ -38,7 +38,7 @@ Available Models
    * - SuperTML
      - SuperTML()
      -
-     - `problem`, `verbose`
+     - `problem`, `columns`, `image_size`, `font_size`, `verbose`
    * - IGTD
      - IGTD()
      -

@@ -5,7 +5,7 @@ Import SuperTML
 ----------------
 To import SuperTML model use:
 
->>> from data2Image.supertml import SuperTML
+>>> from TINTOlib.supertml import SuperTML
 >>> model = SuperTML()
 
 Hyperparameters & Configuration
@@ -26,10 +26,22 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`columns`
+     - Number of columns into which the image is to be divided
+     - 4
+     - integer
+   * - :py:data:`image_size`
+     - Size of the image (pixels)
+     - 224
+     - integer
+   * - :py:data:`font_size`
+     - Size of the font
+     - 10
+     - integer
    * - :py:data:`verbose`
      - Show in terminal the execution
      - False
-     - [True, False]
+     - boolean
 
 
 
