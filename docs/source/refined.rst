@@ -58,7 +58,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load REFINED configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
