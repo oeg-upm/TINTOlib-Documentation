@@ -5,7 +5,7 @@ Import DistanceMatrix
 ----------------
 To import DistanceMatrix model use:
 
->>> from data2Image.distancematrix import DistanceMatrix
+>>> from TINTOlib.distancematrix import DistanceMatrix
 >>> model = DistanceMatrix()
 
 Hyperparameters & Configuration
@@ -26,10 +26,14 @@ When creating the :py:class:`DistanceMatrix` class, some parameters can be modif
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`scale`
+     - The scale of the image. With scale 1 each pixel represents a value of the distance matrix.
+     - 1
+     - integer
    * - :py:data:`verbose`
      - Show in terminal the execution
      - False
-     - [True, False]
+     - boolean
 
 
 
@@ -54,7 +58,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load DistanceMatrix configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
@@ -70,7 +74,6 @@ Functions
 
 Citation
 ------
-**Paper**:
+**Paper**: https://doi.org/10.1038/s41598-022-26378-6
 
-**Code Repository**:
 

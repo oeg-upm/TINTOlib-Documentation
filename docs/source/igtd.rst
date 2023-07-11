@@ -5,7 +5,7 @@ Import IGTD
 ----------------
 To import IGTD model use:
 
->>> from data2Image.igtd import IGTD
+>>> from TINTOlib.igtd import IGTD
 >>> model = IGTD()
 
 Hyperparameters & Configuration
@@ -76,7 +76,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
 
 Code example:
 
->>> model = IGTD(scale=[3,3],erro="abs",val_step=60)
+>>> model = IGTD(scale=[3,3],error="abs",val_step=60)
 
 All the parameters that aren't expecifically setted will have their default values.
 

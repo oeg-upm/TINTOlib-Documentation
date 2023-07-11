@@ -5,7 +5,7 @@ Import BarGraph
 ----------------
 To import BarGraph model use:
 
->>> from data2Image.bargraph import BarGraph
+>>> from TINTOlib.bargraph import BarGraph
 >>> model = BarGraph()
 
 Hyperparameters & Configuration
@@ -26,10 +26,18 @@ When creating the :py:class:`BarGraph` class, some parameters can be modified. T
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`pixel_width`
+     - Bar width in pixels
+     - 3
+     - integer
+   * - :py:data:`gap`
+     - Pixels of distance between each bar
+     - 2
+     - integer
    * - :py:data:`verbose`
      - Show in terminal the execution
      - False
-     - [True, False]
+     - boolean
 
 
 
@@ -54,7 +62,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load BarGraph configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
@@ -70,7 +78,7 @@ Functions
 
 Citation
 ------
-**Paper**:
+**Paper**: https://doi.org/10.1038/s41598-022-26378-6
 
-**Code Repository**:
+
 

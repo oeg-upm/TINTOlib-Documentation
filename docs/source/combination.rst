@@ -5,7 +5,7 @@ Import Combination
 ----------------
 To import Combination model use:
 
->>> from data2Image.combination import Combination
+>>> from TINTOlib.combination import Combination
 >>> model = Combination()
 
 Hyperparameters & Configuration
@@ -26,11 +26,18 @@ When creating the :py:class:`Combination` class, some parameters can be modified
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`pixel_width`
+     - Bar width in pixels
+     - 3
+     - integer
+   * - :py:data:`gap`
+     - Pixels of distance between each bar
+     - 2
+     - integer
    * - :py:data:`verbose`
      - Show in terminal the execution
      - False
-     - [True, False]
-
+     - boolean
 
 
 
@@ -54,7 +61,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load Combination configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
@@ -70,7 +77,5 @@ Functions
 
 Citation
 ------
-**Paper**:
-
-**Code Repository**:
+**Paper**: https://doi.org/10.1038/s41598-022-26378-6
 

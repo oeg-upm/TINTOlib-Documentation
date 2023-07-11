@@ -3,6 +3,16 @@ Introduction
 
 .. _installation:
 
+Requirements
+------------
+Before using TINTOlib these libraries must be installed:
+
+* pandas
+* numpy
+* scikit-learn
+* matplotlib
+* mpi4py
+
 Installation
 ------------
 

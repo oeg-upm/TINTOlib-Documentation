@@ -26,10 +26,14 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`hcIterations`
+     - Maximum number of iterations of the hill climbing algorithm
+     - 100
+     - integer
    * - :py:data:`verbose`
      - Show in terminal the execution
      - False
-     - [True, False]
+     - boolean
 
 
 
@@ -70,7 +74,7 @@ Functions
 
 Citation
 ------
-**Paper**:
+**Paper**: https://doi.org/10.1038/s41467-020-18197-y
 
-**Code Repository**:
+**Code Repository**: https://github.com/omidbazgirTTU/REFINED
 

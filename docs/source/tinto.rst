@@ -43,9 +43,9 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - :py:data:`np.pi`
      - float
    * - :py:data:`distance`
-     - Only with :py:data:`blur=true`, blurring distance (number of pixels)
-     - 2
-     - integer
+     - Only with :py:data:`blur=true`, blurring distance (percentage)
+     - 0.01
+     - float [0,1]
    * - :py:data:`steps`
      - Only with :py:data:`blur=true`, blurring steps
      - 4
