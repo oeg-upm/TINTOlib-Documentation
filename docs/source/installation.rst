@@ -24,12 +24,11 @@ All the methods requires the same input format and the responses outputs will ha
 Available Models
 --------------
 .. list-table:: 
-   :widths: 50 50 50 50
+   :widths: 50 50 50
    :header-rows: 1
 
    * - Method
      - Class name
-     - Features
      - Hyperparameters
    * - TINTO
      - TINTO()
@@ -37,12 +36,14 @@ Available Models
      - `algorithm`, `pixels`, `blur`, `amplification`, `distance`, `steps`, `option`, `seed`, `times`, `verbose`
    * - SuperTML
      - SuperTML()
-     -
      - `problem`, `verbose`
    * - IGTD
      - IGTD()
-     -
-     -  `problem`, `scale`, `fea_dost_method`, `save_image_size`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `seed`, `verbose`
+     - `problem`, `scale`, `fea_dost_method`, `save_image_size`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `seed`, `verbose`
+   * - REFINED
+     - REFINED()
+     - `problem`, `verbose`
+
 
 Input Format
 ------------
