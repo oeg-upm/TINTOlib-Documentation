@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'TINTOlib'
-copyright = '2023, Borja Reinoso'
-author = 'Borja Reinoso'
+copyright = 'Manuel Castillo-Cara'
+author = 'Manuel Castillo-Cara'
 
 release = '0.1'
 version = '0.1.0'
