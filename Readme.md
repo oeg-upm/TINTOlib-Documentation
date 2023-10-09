@@ -1,9 +1,11 @@
 ## TINTOlib
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/BorjaRei/Data2Image/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)](https://pypi.python.org/pypi/)
-[![Documentation Status](https://readthedocs.org/projects/morph-kgc/badge/?version=latest)]()
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/)
+[![Documentation Status](https://readthedocs.org/projects/morph-kgc/badge/?version=latest)](https://tintolib.readthedocs.io/en/latest/)
+[![Open In Colab-CNN](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/10iKmFCC_od-P_tqWzA_UQE2ieUhCV-uy/view?usp=sharing)
+[![Open In Colab-CNN+MLP](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1dv8QYxPsh-HA7TFlmFfQHGE5oMb5VHk4/view?usp=sharing)
+[![Open In Colab-CNN+MLP-reg](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1uQRNgfgi3G2-T4j0VsCnSLLSqzWykPM-/view?usp=sharing)
 
 
 <div>
@@ -94,13 +96,22 @@ To generate the synthetic images use ``.generateImages(data,folder)`` method.
     model.generateImages(data, resultsFolderPath)
 ````
 
+## How to use in CNN
+Once the images have been created by TINTO, they can be imported into any project using CNNs. 
+
+In order to facilitate their use, a Jupyter Notebook has been created in which you can see how the images are read and how they can be used as input in a CNN.
+
+- **[Click here to TINTOlib crash course using classification ML problems with CNNs in Google Colab](https://drive.google.com/file/d/10iKmFCC_od-P_tqWzA_UQE2ieUhCV-uy/view?usp=sharing)**
+- **[Click here to TINTOlib crash course using classification ML problems with hybrid multimodal CNN+MLP in Google Colab](https://drive.google.com/file/d/1dv8QYxPsh-HA7TFlmFfQHGE5oMb5VHk4/view?usp=sharing)**
+- **[Click here to TINTOlib crash course using regression ML problems with hybrid multimodal CNN+MLP in Google Colab](https://drive.google.com/file/d/1uQRNgfgi3G2-T4j0VsCnSLLSqzWykPM-/view?usp=sharing)**
+
 ## License
 
-TINTOlib is available under the **[Apache License 2.0](https://github.com/BorjaRei/Data2Image/blob/main/LICENSE)**.
+TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)**.
 
 ## Authors
 - **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
-- **[Manuel Castillo-Cara](https://github.com/manwestc) - [jcastillo@fi.upm.es](mailto:jcastillo@fi.upm.es)**
+- **[Manuel Castillo-Cara](https://github.com/manwestc)
 - **[Raúl García-Castro](https://github.com/rgcmme)**
 
 
