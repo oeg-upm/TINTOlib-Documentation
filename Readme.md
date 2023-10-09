@@ -105,6 +105,48 @@ In order to facilitate their use, a Jupyter Notebook has been created in which y
 - **[Click here to TINTOlib crash course using classification ML problems with hybrid multimodal CNN+MLP in Google Colab](https://drive.google.com/file/d/1dv8QYxPsh-HA7TFlmFfQHGE5oMb5VHk4/view?usp=sharing)**
 - **[Click here to TINTOlib crash course using regression ML problems with hybrid multimodal CNN+MLP in Google Colab](https://drive.google.com/file/d/1uQRNgfgi3G2-T4j0VsCnSLLSqzWykPM-/view?usp=sharing)**
 
+## Converting Tidy Data into image
+
+For example, the following table shows a classic example of the [IRIS CSV dataset](https://archive.ics.uci.edu/ml/datasets/iris) as it should look like for the run:
+
+
+| sepal length | sepal width | petal length | petal width | target |
+|--------------|-------------|--------------|-------------|--------|
+| 4.9          | 3.0         | 1.4          | 0.2         | 1      |
+| 7.0          | 3.2         | 4.7          | 1.4         | 2      |
+| 6.3          | 3.3         | 6.0          | 2.5         | 3      |
+
+
+### Simple example without Blurring
+The following example shows how to create 20x20 images with characteristic pixels, i.e. without blurring. 
+Also, as no other parameters are indicated, you will choose the following parameters which are set by default:
+- **Image size**: 20x20 pixels
+- **Blurring**: No blurring will be used.
+- **Seed**: with the seed set to 20.
+
+<div>
+<p align = "center">
+<kbd><img src="imgs/characteristic.png" alt="TINTO characteristic pixel" width="250"></kbd>
+</p>
+</div>
+
+
+### More specific example
+The following example shows how to create with blurring with a more especific parameters.
+
+The images are created with the following considerations regarding the parameters used:
+- **Blurring (-B)**: Create the images with blurring technique.
+- **Dimensional Reduction Algorithm (-alg)**: t-SNE is used.
+- **Blurring option (-oB)**: Create de images with maximum value of overlaping pixel
+- **Image size (-px)**: 30x30 pixels
+- **Blurring steps (-sB)**: Expand 5 pixels the blurring.
+
+<div>
+<p align = "center">
+<kbd><img src="imgs/blurring.png" alt="TINTO blurring" width="250"></kbd>
+</p>
+</div>
+
 ## License
 
 TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)**.
