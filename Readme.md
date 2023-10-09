@@ -115,5 +115,12 @@ TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-up
 - **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
 
 
+## Contributors
+
+<div>
+<p align = "center">
+<kbd><img src="assets/logo-oeg.png" alt="Ontology Engineering Group" width="200"></kbd> <kbd><img src="assets/logo-upm.png" alt="Universidad Politécnica de Madrid" width="200"></kbd> <kbd><img src="assets/logo-uned-.jpg" alt="Universidad Nacional de Educación a Distancia" width="200"></kbd> <kbd><img src="assets/logo-uclm.png" alt="Universidad de Castilla-La Mancha" width="155"></kbd> 
+</p>
+</div>
 
 
