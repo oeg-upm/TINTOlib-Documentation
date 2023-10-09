@@ -78,7 +78,7 @@ And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022
 **You can install TINTOlib using [Pypi](https://pypi.org/project/TINTOlib/)**:
 
 ```
-    pip install TINTOlib
+    pip install torchmetrics pytorch_lightning TINTOlib imblearn keras_preprocessing mpi4py
 ```
 
 
@@ -96,7 +96,7 @@ To generate the synthetic images use ``.generateImages(data,folder)`` method.
     model.generateImages(data, resultsFolderPath)
 ````
 
-## How to use in CNN
+## How to use TINTOlib - Google Colab crash course
 Once the images have been created by TINTO, they can be imported into any project using CNNs. 
 
 In order to facilitate their use, a Jupyter Notebook has been created in which you can see how the images are read and how they can be used as input in a CNN.
@@ -110,9 +110,10 @@ In order to facilitate their use, a Jupyter Notebook has been created in which y
 TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)**.
 
 ## Authors
-- **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
-- **[Manuel Castillo-Cara](https://github.com/manwestc)
+- **[Manuel Castillo-Cara](https://github.com/manwestc)**
 - **[Raúl García-Castro](https://github.com/rgcmme)**
+- **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
+
 
 
 
