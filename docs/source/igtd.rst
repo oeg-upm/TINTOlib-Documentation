@@ -27,7 +27,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`scale`
-     - Characteristic pixels of the final image (row x col)
+     - Characteristic pixels of the final image (row x col).
      - [6,6]
      - [int, int]
    * - :py:data:`zoom`
@@ -35,39 +35,39 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - 1
      - int
    * - :py:data:`fea_dist_method`
-     - Correlation coefficient to evaluate similarity between features
+     - Correlation coefficient to evaluate similarity between features.
      - 'Pearson'
      - ['Pearson', 'Spearman', 'set', 'Euclidean']
    * - :py:data:`image_dist_method`
-     - Method used to calculate distance
+     - Method used to calculate distance.
      - 'Euclidean'
      - ['Euclidean', 'Manhattan']
    * - :py:data:`max_step`
-     - The maximum steps that the algorithm should run if never converges
+     - The maximum steps that the algorithm should run if never converges.
      - 1000
      - int
    * - :py:data:`val_step`
-     - Number of steps for checking gain on the objective function to determine convergence
+     - Number of steps for checking gain on the objective function to determine convergence.
      - 50
      - int
    * - :py:data:`error`
-     - Function to evaluate the difference between feature distance ranking and pixel distance ranking
+     - Function to evaluate the difference between feature distance ranking and pixel distance ranking.
      - 'squared'
      - ['squared', 'abs']
    * - :py:data:`switch_t`
-     - The threshold to determine whether switch should happen
+     - The threshold to determine whether switch should happen.
      - 0
      - int
    * - :py:data:`min_gain`
-     - If the objective function is not improved more than 'min_gain' in 'val_step' steps, the algorithm terminates
+     - If the objective function is not improved more than 'min_gain' in 'val_step' steps, the algorithm terminates.
      - 0.00001
      - float
    * - :py:data:`random_seed`
-     - Seed for reproducibility
+     - Seed for reproducibility.
      - 1
      - integer
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
      - [True, False]
 
