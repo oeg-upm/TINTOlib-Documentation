@@ -27,11 +27,11 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`scale`
-     - Characteristic pixels of the final image (row x col).
+     - Characteristic pixels of the final image (row x col). [row x col] must be equal or greater than the number of features.
      - [6,6]
      - [int, int]
    * - :py:data:`zoom`
-     - Multiplication factor that determines the size of the saved image relative to the original figure size. Values greater than 1 will increase the size of the saved image proportionally.
+     - Multiplication factor that determines the size of the saved image relative to the original figure size. Values greater than 1 will increase the size of the saved image proportionally using Nearest-neighbor interpolation.
      - 1
      - int
    * - :py:data:`fea_dist_method`
