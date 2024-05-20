@@ -62,7 +62,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - If the objective function is not improved more than 'min_gain' in 'val_step' steps, the algorithm terminates
      - 0.00001
      - float
-   * - :py:data:`seed`
+   * - :py:data:`random_seed`
      - Seed for reproducibility
      - 1
      - integer
