@@ -30,6 +30,10 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - Characteristic pixels of the final image (row x col)
      - [6,6]
      - [int, int]
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original figure size. Values greater than 1 will increase the size of the saved image proportionally.
+     - 1
+     - int
    * - :py:data:`fea_dist_method`
      - Correlation coefficient to evaluate similarity between features
      - 'Pearson'
@@ -38,10 +42,6 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - Method used to calculate distance
      - 'Euclidean'
      - ['Euclidean', 'Manhattan']
-   * - :py:data:`zoom`
-     - Multiplication factor that determines the size of the saved image relative to the original figure size
-     - 1
-     - int
    * - :py:data:`max_step`
      - The maximum steps that the algorithm should run if never converges
      - 1000
