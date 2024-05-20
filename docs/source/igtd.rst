@@ -5,7 +5,7 @@ Import IGTD
 ----------------
 To import IGTD model use:
 
->>> from data2Image.igtd import IGTD
+>>> from TINTOlib.igtd import IGTD
 >>> model = IGTD()
 
 Hyperparameters & Configuration
@@ -28,19 +28,19 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`scale`
      - Characteristic pixels of the final image (row x col)
-     - [2,2]
+     - [6,6]
      - [int, int]
-   * - :py:data:`fea_dost_method`
+   * - :py:data:`fea_dist_method`
      - Correlation coefficient to evaluate similarity between features
      - 'Pearson'
-     - ['Pearson', 'Spearman', 'set']
+     - ['Pearson', 'Spearman', 'set', 'Euclidean']
    * - :py:data:`image_dist_method`
      - Method used to calculate distance
      - 'Euclidean'
      - ['Euclidean', 'Manhattan']
-   * - :py:data:`save_image_size`
-     - Number of pixels of the image (n x n)
-     - 20
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original figure size
+     - 1
      - int
    * - :py:data:`max_step`
      - The maximum steps that the algorithm should run if never converges
@@ -63,7 +63,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - 0.00001
      - float
    * - :py:data:`seed`
-     - Seed for the random numbers used in the method
+     - Seed for reproducibility
      - 1
      - integer
    * - :py:data:`verbose`
@@ -76,7 +76,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
 
 Code example:
 
->>> model = IGTD(scale=[3,3],erro="abs",val_step=60)
+>>> model = IGTD(scale=[3,3],error="abs",val_step=60)
 
 All the parameters that aren't expecifically setted will have their default values.
 
@@ -92,7 +92,7 @@ IGTD has the following functions:
      - Description
      - Output
    * - :py:data:`saveHyperparameters(filename)`
-     -  Allows to save the defined parameters (scale, fea_dost_method, image_dist_method....).
+     -  Allows to save the defined parameters (scale, fea_dist_method, image_dist_method....).
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
      - Load IGTD configuration previously saved with :py:data:`saveHyperparameters(filename)`
@@ -116,4 +116,3 @@ Citation
 **Paper**: https://doi.org/10.1038/s41598-021-90923-y
 
 **Code Repository**: https://github.com/zhuyitan/igtd
-
