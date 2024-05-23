@@ -5,7 +5,7 @@ Import TINTO
 ----------------
 To import TINTO model use:
 
->>> from data2Image.tinto import TINTO
+>>> from TINTOlib.tinto import TINTO
 >>> model = TINTO()
 
 Hyperparameters & Configuration
@@ -27,35 +27,39 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`algorithm`
-     - Select the dimensionality reduction algorithm between the options
+     - Select the dimensionality reduction algorithm.
      - PCA
      - [PCA, t-SNE]
    * - :py:data:`pixels`
      - The number of pixels used to create the image (only one side, total_pixels = pixels * pixels)
      - 20
      - integer
+   * - :py:data:`submatrix`
+     - Specifies whether to use a submatrix for blurring.
+     - True
+     - [True, False]
    * - :py:data:`blur`
-     - Activate or deactivate the blurring option
+     - Activate or deactivate the blurring option.
      - False
      - [True, False]
    * - :py:data:`amplification`
-     - Only with :py:data:`blur=true`, blurring amplification
+     - Only with :py:data:`blur=true`, blurring amplification.
      - :py:data:`np.pi`
      - float
    * - :py:data:`distance`
-     - Only with :py:data:`blur=true`, blurring distance (number of pixels)
+     - Only with :py:data:`blur=true`, blurring distance (number of pixels).
      - 2
      - integer
    * - :py:data:`steps`
-     - Only with :py:data:`blur=true`, blurring steps
+     - Only with :py:data:`blur=true`, blurring steps.
      - 4
      - integer
    * - :py:data:`option`
-     - Only with :py:data:`blur=true`, technique for handling overlapping pixels
+     - Only with :py:data:`blur=true`, technique for handling overlapping pixels.
      - mean
      - [mean, maximum]
-   * - :py:data:`seed`
-     - Seed for the random numbers used in the method
+   * - :py:data:`random_seed`
+     - Seed for reproducibility.
      - 20
      - integer
    * - :py:data:`times`
