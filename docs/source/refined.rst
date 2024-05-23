@@ -26,14 +26,26 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+     - 1
+     - int
+   * - :py:data:`n_processors`
+     -  The number of processors to use for the algorithm. It must be an integer greater than or equal to 2.
+     -  '8'
+     - int
    * - :py:data:`hcIterations`
-     - Maximum number of iterations of the hill climbing algorithm
-     - 100
+     -  Number of iterations of the hill climbing algorithm.
+     -  '5'
+     - int
+   * - :py:data:`random_seed`
+     - Seed for reproducibility.
+     - 1
      - integer
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
-     - boolean
+     - [True, False]
 
 
 
@@ -58,7 +70,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load REFINED configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
@@ -74,7 +86,7 @@ Functions
 
 Citation
 ------
-**Paper**: https://doi.org/10.1038/s41467-020-18197-y
+**Paper**:
 
-**Code Repository**: https://github.com/omidbazgirTTU/REFINED
+**Code Repository**:
 
