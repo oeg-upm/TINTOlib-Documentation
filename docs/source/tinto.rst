@@ -23,7 +23,7 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - Default value
      - Valid values
    * - :py:data:`problem`
-     -  The type of problem, this will define how the images are grouped.
+     -  The type of problem, this will define how the images are grouped
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`algorithm`
@@ -35,27 +35,27 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - 20
      - integer
    * - :py:data:`submatrix`
-     - Specifies whether to use a submatrix for blurring.
+     - Specifies whether to use a submatrix for blurring
      - True
      - [True, False]
    * - :py:data:`blur`
-     - Activate or deactivate the blurring option.
+     - Activate or deactivate the blurring option
      - False
      - [True, False]
    * - :py:data:`amplification`
-     - Only with :py:data:`blur=true`, blurring amplification.
+     - Only with :py:data:`blur=true`, blurring amplification
      - :py:data:`np.pi`
      - float
    * - :py:data:`distance`
-     - Only with :py:data:`blur=true`, blurring distance (number of pixels).
+     - Only with :py:data:`blur=true`, blurring distance (number of pixels)
      - 2
      - integer
    * - :py:data:`steps`
-     - Only with :py:data:`blur=true`, blurring steps.
+     - Only with :py:data:`blur=true`, blurring steps
      - 4
      - integer
    * - :py:data:`option`
-     - Only with :py:data:`blur=true`, technique for handling overlapping pixels.
+     - Only with :py:data:`blur=true`, technique for handling overlapping pixels
      - mean
      - [mean, maximum]
    * - :py:data:`random_seed`
@@ -91,7 +91,7 @@ Functions
      - Description
      - Output
    * - :py:data:`saveHyperparameters(filename)`
-     -  Allows to save the defined parameters (scale, fea_dost_method, image_dist_method....).
+     -  Allows to save the defined parameters (scale, fea_dost_method, image_dist_method....)
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
      - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
