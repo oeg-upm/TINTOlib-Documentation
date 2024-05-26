@@ -15,7 +15,7 @@ When creating the :py:class:`SuperTML` class, some parameters can be modified. T
 
 
 .. list-table:: 
-   :widths: 20 20 20 20
+   :widths: 20 5 20 20
    :header-rows: 1
 
    * - Parameters
