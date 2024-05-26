@@ -31,7 +31,7 @@ When creating the :py:class:`SuperTML` class, some parameters can be modified. T
      - 224
      - integer
    * - :py:data:`feature_importance`
-     -If False, SuperTML-EF (Equal Font) is used, where all features are displayed with equal font sizes. If True, SuperTML-VF (Variable Font) is used, where the font size of each feature is proportional to its importance.
+     - If False, SuperTML-EF (Equal Font) is used, where all features are displayed with equal font sizes. If True, SuperTML-VF (Variable Font) is used, where the font size of each feature is proportional to its importance.
      - False
      - [True, False]
    * - :py:data:`font_size`
