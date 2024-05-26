@@ -5,7 +5,7 @@ Import DistanceMatrix
 ----------------
 To import DistanceMatrix model use:
 
->>> from data2Image.distancematrix import DistanceMatrix
+>>> from TINTOlib.distancematrix import DistanceMatrix
 >>> model = DistanceMatrix()
 
 Hyperparameters & Configuration
@@ -26,8 +26,12 @@ When creating the :py:class:`DistanceMatrix` class, some parameters can be modif
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+* - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+     - 1
+     - int
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
      - [True, False]
 
