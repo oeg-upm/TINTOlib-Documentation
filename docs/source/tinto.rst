@@ -58,13 +58,13 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - Only with :py:data:`blur=true`, technique for handling overlapping pixels
      - mean
      - [mean, maximum]
-   * - :py:data:`random_seed`
-     - Seed for reproducibility.
-     - 20
-     - integer
    * - :py:data:`times`
      - Only with :py:data:`algorithm=t-SNE`, times replication in t-SNE
      - 4
+     - integer
+   * - :py:data:`random_seed`
+     - Seed for reproducibility.
+     - 20
      - integer
    * - :py:data:`verbose`
      - Show in terminal the execution
