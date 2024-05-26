@@ -5,7 +5,7 @@ Import BarGraph
 ----------------
 To import BarGraph model use:
 
->>> from data2Image.bargraph import BarGraph
+>>> from TINTOlib.bargraph import BarGraph
 >>> model = BarGraph()
 
 Hyperparameters & Configuration
@@ -26,8 +26,16 @@ When creating the :py:class:`BarGraph` class, some parameters can be modified. T
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`pixel_width`
+     - The width (in pixels) for each column.
+     - 1
+     - integer
+   * - :py:data:`gap`
+     - The separation (in pixels) between each column.
+     - 0
+     - integer
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
      - [True, False]
 
