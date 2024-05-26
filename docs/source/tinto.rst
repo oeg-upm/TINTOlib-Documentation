@@ -27,7 +27,7 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`algorithm`
-     - Select the dimensionality reduction algorithm.
+     - Select the dimensionality reduction algorithm
      - PCA
      - [PCA, t-SNE]
    * - :py:data:`pixels`
@@ -63,7 +63,7 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - 4
      - integer
    * - :py:data:`random_seed`
-     - Seed for reproducibility.
+     - Seed for reproducibility
      - 20
      - integer
    * - :py:data:`verbose`
