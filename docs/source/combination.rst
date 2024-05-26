@@ -5,7 +5,7 @@ Import Combination
 ----------------
 To import Combination model use:
 
->>> from data2Image.combination import Combination
+>>> from TINTOlib.combination import Combination
 >>> model = Combination()
 
 Hyperparameters & Configuration
