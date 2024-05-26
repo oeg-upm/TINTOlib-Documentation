@@ -1,9 +1,9 @@
-Refined
+REFINED
 =====
 
-Import Refined
+Import REFINED
 ----------------
-To import Refined model use:
+To import REFINED model use:
 
 >>> from TINTOlib.refined import REFINED
 >>> model = REFINED()
