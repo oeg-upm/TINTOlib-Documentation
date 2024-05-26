@@ -26,7 +26,7 @@ When creating the :py:class:`DistanceMatrix` class, some parameters can be modif
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
-* - :py:data:`zoom`
+   * - :py:data:`zoom`
      - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
      - 1
      - int
