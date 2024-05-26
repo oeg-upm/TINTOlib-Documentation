@@ -23,11 +23,11 @@ When creating the :py:class:`SuperTML` class, some parameters can be modified. T
      - Default value
      - Valid values
    * - :py:data:`problem`
-     - The type of problem, this will define how the images are grouped
+     - The type of problem, this will define how the images are grouped.
      - 'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`image_pixels`
-     - The number of pixels used to create the image (only one side, total_pixels = pixels * pixels)
+     - The number of pixels used to create the image (only one side, total_pixels = pixels * pixels).
      - 224
      - integer
    * - :py:data:`feature_importance`
@@ -43,7 +43,7 @@ When creating the :py:class:`SuperTML` class, some parameters can be modified. T
      - 1
      - integer
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
      - [True, False]
 
