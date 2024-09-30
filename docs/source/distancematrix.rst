@@ -27,7 +27,7 @@ When creating the :py:class:`DistanceMatrix` class, some parameters can be modif
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`zoom`
-     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+     - Scaling factor for the output images.
      - 1
      - int
    * - :py:data:`verbose`
