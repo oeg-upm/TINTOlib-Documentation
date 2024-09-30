@@ -1,17 +1,17 @@
-DistanceMatrix
+BIE
 =====
 
-Import DistanceMatrix
+Import BIE
 ----------------
-To import DistanceMatrix model use:
+To import the BIE model, use:
 
->>> from TINTOlib.distancematrix import DistanceMatrix
->>> model = DistanceMatrix()
+>>> from TINTOlib.bie import BIE
+>>> model = BIE()
 
 Hyperparameters & Configuration
 ---------------
 
-When creating the :py:class:`DistanceMatrix` class, some parameters can be modified. The parameters are:
+When creating the :py:class:`BIE` class, some parameters can be modified. The parameters are:
 
 
 .. list-table::
@@ -26,10 +26,14 @@ When creating the :py:class:`DistanceMatrix` class, some parameters can be modif
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
-   * - :py:data:`zoom`
-     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+   * - :py:data:precision
+     - Number of bits used to represent each feature.
+     - 32
+     - [32, 64]
+   * - :py:data:zoom
+     - Scaling factor for the output images.
      - 1
-     - int
+     - Positive integer
    * - :py:data:`verbose`
      - Show in terminal the execution.
      - False
@@ -40,7 +44,7 @@ When creating the :py:class:`DistanceMatrix` class, some parameters can be modif
 
 Code example:
 
->>> model = DistanceMatrix(problem='regression')
+>>> model = BIE(problem='regression', precision=64, zoom=2)
 
 All the parameters that aren't expecifically setted will have their default values.
 
@@ -58,7 +62,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load DistanceMatrix configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load BIE configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
