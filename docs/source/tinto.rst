@@ -64,7 +64,7 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - integer
    * - :py:data:`random_seed`
      - Seed for reproducibility.
-     - 20
+     - 1
      - integer
    * - :py:data:`verbose`
      - Show in terminal the execution.
