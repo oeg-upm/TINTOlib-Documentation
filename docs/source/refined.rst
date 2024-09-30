@@ -34,14 +34,14 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      -  Number of iterations of the hill climbing algorithm.
      -  '5'
      - int
-   * - :py:data:`random_seed`
-     - Seed for reproducibility.
-     - 1
-     - integer
    * - :py:data:`zoom`
      - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
      - 1
      - int
+   * - :py:data:`random_seed`
+     - Seed for reproducibility.
+     - 1
+     - integer
    * - :py:data:`verbose`
      - Show in terminal the execution.
      - False
