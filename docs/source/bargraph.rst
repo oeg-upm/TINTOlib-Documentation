@@ -62,7 +62,7 @@ Functions
      -  Allows to save the defined parameters ().
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load BarGraph configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
         - filename: .pkl file path
      -
