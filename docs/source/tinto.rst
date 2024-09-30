@@ -62,6 +62,10 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - Only with :py:data:`algorithm=t-SNE`, times replication in t-SNE.
      - 4
      - integer
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+     - 1
+     - int
    * - :py:data:`random_seed`
      - Seed for reproducibility.
      - 1

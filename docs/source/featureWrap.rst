@@ -30,13 +30,13 @@ When creating the :py:class:`FeatureWrap` class, some parameters can be modified
      - The width and height of the final image, in pixels (rows x columns).
      - [8,8]
      - [int, int]
-   * - :py:data:`zoom`
-     - Multiplication factor that determines the size of the saved image relative to the original figure size. Values greater than 1 will increase the size of the saved image proportionally using Nearest-neighbor interpolation.
-     - 1
-     - int
    * - :py:data:`bins`
      - The number of bins or intervals used for grouping numeric data
      - 10
+     - int
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original figure size. Values greater than 1 will increase the size of the saved image proportionally using Nearest-neighbor interpolation.
+     - 1
      - int
    * - :py:data:`random_seed`
      - Seed for reproducibility.
