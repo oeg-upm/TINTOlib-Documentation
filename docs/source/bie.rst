@@ -26,11 +26,11 @@ When creating the :py:class:`BIE` class, some parameters can be modified. The pa
      -  The type of problem, this will define how the images are grouped.
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
-   * - :py:data:precision
+   * - :py:data:`precision`
      - Number of bits used to represent each feature.
      - 32
      - [32, 64]
-   * - :py:data:zoom
+   * - :py:data:`zoom`
      - Scaling factor for the output images.
      - 1
      - Positive integer
