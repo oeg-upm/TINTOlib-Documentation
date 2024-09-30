@@ -21,7 +21,7 @@ TINTOlib contains state-of-the-art most important methods for the construction o
 
 All the methods requires the same input format and the responses outputs will have the same format.
 
-Available Models
+Available Methods
 --------------
 .. list-table:: 
    :widths: 50 50 50 50
@@ -34,15 +34,39 @@ Available Models
    * - TINTO
      - TINTO()
      - blur
-     - `algorithm`, `pixels`, `blur`, `amplification`, `distance`, `steps`, `option`, `seed`, `times`, `verbose`
-   * - SuperTML
-     - SuperTML()
-     -
-     - `problem`, `verbose`
+     - `problem`, `algorithm`, `pixels`, `submatrix`, `blur`, `amplification`, `distance`, `steps`, `option`, `random_seed`, `times`, `verbose`
    * - IGTD
      - IGTD()
-     -
-     -  `problem`, `scale`, `fea_dost_method`, `save_image_size`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `seed`, `verbose`
+     - 
+     - `problem`, `scale`, `fea_dist_method`, `image_dist_method`, `max_step`, `val_step`, `error`, `switch_t`, `min_gain`, `zoom`, `random_seed`, `verbose`
+   * - REFINED
+     - REFINED()
+     - 
+     - `problem`, `n_processors`, `hcIterations`, `zoom`, `random_seed`, `verbose`
+   * - BarGraph
+     - BarGraph()
+     - 
+     - `problem`, `pixel_width`, `gap`, `zoom`, `verbose`
+   * - DistanceMatrix
+     - DistanceMatrix()
+     - 
+     - `problem`, `zoom`, `verbose`
+   * - Combination
+     - Combination()
+     - 
+     - `problem`, `zoom`, `verbose`
+   * - SuperTML
+     - SuperTML()
+     - 
+     - `problem`, `columns`, `font_size`, `image_size`, `verbose`
+   * - FeatureWrap
+     - FeatureWrap()
+     - 
+     - `problem`, `size`, `bins`, `zoom`, `verbose`
+   * - BIE
+     - BIE()
+     - 
+     - `problem`, `precision`, `zoom`, `verbose`
 
 Input Format
 ------------
