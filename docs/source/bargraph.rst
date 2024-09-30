@@ -34,6 +34,10 @@ When creating the :py:class:`BarGraph` class, some parameters can be modified. T
      - The separation (in pixels) between each column.
      - 0
      - integer
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+     - 1
+     - int
    * - :py:data:`verbose`
      - Show in terminal the execution.
      - False
