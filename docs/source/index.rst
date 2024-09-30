@@ -18,10 +18,12 @@ Contents
    installation
    dataformat
    tinto
-   supertml
    igtd
    refined
    bargraph
    distancematrix
    combination
+   supertml
+   featureWrap
+   bie
 
