@@ -27,7 +27,7 @@ When creating the :py:class:`Combination` class, some parameters can be modified
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`zoom`
-     - Scaling factor for the output images.
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
      - 1
      - int
    * - :py:data:`verbose`
