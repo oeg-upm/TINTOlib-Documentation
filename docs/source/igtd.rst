@@ -59,7 +59,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - 0.00001
      - float
    * - :py:data:`zoom`
-     - Multiplication factor that determines the size of the saved image relative to the original figure size. Values greater than 1 will increase the size of the saved image proportionally using Nearest-neighbor interpolation.
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
      - 1
      - int
    * - :py:data:`random_seed`

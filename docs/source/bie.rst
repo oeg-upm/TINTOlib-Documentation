@@ -31,7 +31,7 @@ When creating the :py:class:`BIE` class, some parameters can be modified. The pa
      - 32
      - [32, 64]
    * - :py:data:`zoom`
-     - Scaling factor for the output images.
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
      - 1
      - Positive integer
    * - :py:data:`verbose`
