@@ -158,9 +158,9 @@ Also, as no other parameters are indicated, you will choose the following parame
 TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)**.
 
 ## Authors
-- **[Manuel Castillo-Cara](https://github.com/manwestc)**
-- **[Raúl García-Castro](https://github.com/rgcmme)**
-- **[Borja Reinoso](https://github.com/borjarei) - [borjareinoso@gmail.com](borjareinoso@gmail.com)**
+- **[Manuel Castillo-Cara](https://github.com/manwestc) - [manuelcastillo@dia.uned.es](manuelcastillo@dia.uned.es)**
+- **[Raúl García-Castro](https://github.com/rgcmme) - [r.garcia@upm.es](r.garcia@upm.es)**
+- **[Jiayun Liu](https://github.com/DCY1117) - [jiayun.liu@upm.es](jiayun.liu@upm.es)**
 
 
 ## Contributors
