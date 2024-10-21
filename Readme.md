@@ -60,9 +60,9 @@ And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022
 }
 ```
 
-## Models
+## Methods
 
-|                              Model                               |    Class     | Features |                                                                Hyperparameters                                                                 |
+|                              Methods                               |    Class     | Features |                                                                Hyperparameters                                                                 |
 |:----------------------------------------------------------------:|:------------:|:--------:|:----------------------------------------------------------------------------------------------------------------------------------------------:|
 |            [TINTO](https://github.com/oeg-upm/TINTO)             |  `TINTO()`   |  `blur`  |                   `problem` `algorithm` `pixels` `submatrix` `blur` `amplification` `distance` `steps` `option` `random_seed` `times` `verbose`                   |
 |             [IGTD](https://github.com/zhuyitan/igtd)             |   `IGTD()`   |          | `problem` `scale` `fea_dist_method` `image_dist_method` `max_step` `val_step` `error` `switch_t` `min_gain` `zoom` `random_seed` `verbose` |
@@ -133,7 +133,7 @@ For example, the following table shows a classic example of the [IRIS CSV datase
 | 6.3          | 3.3         | 6.0          | 2.5         | 3      |
 
 
-### Simple example without Blurring
+### Simple example with TINTO method
 The following example shows how to create 20x20 images with characteristic pixels, i.e. without blurring. 
 Also, as no other parameters are indicated, you will choose the following parameters which are set by default:
 - **Image size**: 20x20 pixels
