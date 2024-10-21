@@ -5,7 +5,7 @@ Import IGTD
 ----------------
 To import IGTD model use:
 
->>> from data2Image.igtd import IGTD
+>>> from TINTOlib.igtd import IGTD
 >>> model = IGTD()
 
 Hyperparameters & Configuration
@@ -27,47 +27,47 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      -  'supervised'
      - ['supervised', 'unsupervised', 'regression']
    * - :py:data:`scale`
-     - Characteristic pixels of the final image (row x col)
-     - [2,2]
+     - Characteristic pixels of the final image (row x col). [row x col] must be equal or greater than the number of features.
+     - [6,6]
      - [int, int]
-   * - :py:data:`fea_dost_method`
-     - Correlation coefficient to evaluate similarity between features
+   * - :py:data:`fea_dist_method`
+     - Correlation coefficient to evaluate similarity between features.
      - 'Pearson'
-     - ['Pearson', 'Spearman', 'set']
+     - ['Pearson', 'Spearman', 'set', 'Euclidean']
    * - :py:data:`image_dist_method`
-     - Method used to calculate distance
+     - Method used to calculate distance.
      - 'Euclidean'
      - ['Euclidean', 'Manhattan']
-   * - :py:data:`save_image_size`
-     - Number of pixels of the image (n x n)
-     - 20
-     - int
    * - :py:data:`max_step`
-     - The maximum steps that the algorithm should run if never converges
+     - The maximum steps that the algorithm should run if never converges.
      - 1000
      - int
    * - :py:data:`val_step`
-     - Number of steps for checking gain on the objective function to determine convergence
+     - Number of steps for checking gain on the objective function to determine convergence.
      - 50
      - int
    * - :py:data:`error`
-     - Function to evaluate the difference between feature distance ranking and pixel distance ranking
+     - Function to evaluate the difference between feature distance ranking and pixel distance ranking.
      - 'squared'
      - ['squared', 'abs']
    * - :py:data:`switch_t`
-     - The threshold to determine whether switch should happen
+     - The threshold to determine whether switch should happen.
      - 0
      - int
    * - :py:data:`min_gain`
-     - If the objective function is not improved more than 'min_gain' in 'val_step' steps, the algorithm terminates
+     - If the objective function is not improved more than 'min_gain' in 'val_step' steps, the algorithm terminates.
      - 0.00001
      - float
-   * - :py:data:`seed`
-     - Seed for the random numbers used in the method
+   * - :py:data:`zoom`
+     - Multiplication factor that determines the size of the saved image relative to the original size. Values greater than 1 will increase the size of the saved image proportionally.
+     - 1
+     - int
+   * - :py:data:`random_seed`
+     - Seed for reproducibility.
      - 1
      - integer
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
      - [True, False]
 
@@ -76,7 +76,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
 
 Code example:
 
->>> model = IGTD(scale=[3,3],erro="abs",val_step=60)
+>>> model = IGTD(scale=[3,3],error="abs",val_step=60)
 
 All the parameters that aren't expecifically setted will have their default values.
 
@@ -92,7 +92,7 @@ IGTD has the following functions:
      - Description
      - Output
    * - :py:data:`saveHyperparameters(filename)`
-     -  Allows to save the defined parameters (scale, fea_dost_method, image_dist_method....).
+     -  Allows to save the defined parameters (scale, fea_dist_method, image_dist_method....).
      -  .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
      - Load IGTD configuration previously saved with :py:data:`saveHyperparameters(filename)`
@@ -116,4 +116,3 @@ Citation
 **Paper**: https://doi.org/10.1038/s41598-021-90923-y
 
 **Code Repository**: https://github.com/zhuyitan/igtd
-

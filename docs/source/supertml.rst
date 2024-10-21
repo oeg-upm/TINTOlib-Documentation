@@ -5,17 +5,17 @@ Import SuperTML
 ----------------
 To import SuperTML model use:
 
->>> from data2Image.supertml import SuperTML
+>>> from TINTOlib.supertml import SuperTML
 >>> model = SuperTML()
 
 Hyperparameters & Configuration
 ---------------
 
-When creating the :py:class:`tinto` class, some parameters can be modified. The parameters are:
+When creating the :py:class:`SuperTML` class, some parameters can be modified. The parameters are:
 
 
 .. list-table:: 
-   :widths: 20 40 20 20
+   :widths: 20 5 20 20
    :header-rows: 1
 
    * - Parameters
@@ -23,11 +23,27 @@ When creating the :py:class:`tinto` class, some parameters can be modified. The 
      - Default value
      - Valid values
    * - :py:data:`problem`
-     -  The type of problem, this will define how the images are grouped.
-     -  'supervised'
+     - The type of problem, this will define how the images are grouped.
+     - 'supervised'
      - ['supervised', 'unsupervised', 'regression']
+   * - :py:data:`image_pixels`
+     - The number of pixels used to create the image (only one side, total_pixels = pixels * pixels).
+     - 224
+     - integer
+   * - :py:data:`feature_importance`
+     - If False, SuperTML-EF (Equal Font) is used, where all features are displayed with equal font sizes. If True, SuperTML-VF (Variable Font) is used, where the font size of each feature is proportional to its importance.
+     - False
+     - [True, False]
+   * - :py:data:`font_size`
+     - The size of the font used to render the text on the generated images.
+     - 10
+     - integer
+   * - :py:data:`random_seed`
+     - Seed for reproducibility.
+     - 1
+     - integer
    * - :py:data:`verbose`
-     - Show in terminal the execution
+     - Show in terminal the execution.
      - False
      - [True, False]
 
