@@ -76,15 +76,11 @@ And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022
 
 
 ## TINTOlib Crash Course:
-[TINTOlib Crash Course](https://github.com/oeg-upm/TINTOlib-Crash_Course) epository provides a comprehensive crash course on using [TINTOlib](https://tintolib.readthedocs.io/en/latest/), a Python library designed to transform tabular data into synthetic images for machine learning tasks. It includes slides and Jupyter notebooks that demonstrate how to apply state-of-the-art vision models like Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs) to problems such as regression and classification, using [TINTOlib](https://tintolib.readthedocs.io/en/latest/) for data transformation.
+[TINTOlib Crash Course](https://github.com/oeg-upm/TINTOlib-Crash_Course) repository provides a comprehensive crash course on using [TINTOlib](https://tintolib.readthedocs.io/en/latest/), a Python library designed to transform tabular data into synthetic images for machine learning tasks. It includes slides and Jupyter notebooks that demonstrate how to apply state-of-the-art vision models like Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs) to problems such as regression and classification, using [TINTOlib](https://tintolib.readthedocs.io/en/latest/) for data transformation.
 
 The repository also features Hybrid Neural Networks (HyNNs), where one branch is an MLP designed to process tabular data, while another branch—either CNN or ViT—handles the synthetic images. This architecture leverages the strengths of both data formats for enhanced performance on complex machine learning tasks. Ideal for those looking to integrate image-based deep learning techniques into tabular data problems.
 
 [ACCESS HERE](https://github.com/oeg-upm/TINTOlib-Crash_Course)
-
-## Documentation
-
-**[Read the documentation](https://tintolib.readthedocs.io/en/latest/)**.
 
 ## Getting Started
 
@@ -125,7 +121,7 @@ In order to facilitate their use, a Jupyter Notebook has been created in which y
 - **TensorFlow - ViT + MLP Hybrid**:  
   [![Open In Colab - TensorFlow ViT + MLP](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DCY1117/ECAI2024-Material/blob/main/Notebooks/Challenge/Tensorflow_Regression_ViT%2BMLP.ipynb)
 
-## Converting Tidy Data into image
+## Converting Tidy Data into synthetic image
 
 For example, the following table shows a classic example of the [IRIS CSV dataset](https://archive.ics.uci.edu/ml/datasets/iris) as it should look like for the run:
 
@@ -151,21 +147,11 @@ Also, as no other parameters are indicated, you will choose the following parame
 </div>
 
 
-### More specific example
-The following example shows how to create with blurring with a more especific parameters.
-
-The images are created with the following considerations regarding the parameters used:
-- **Blurring (-B)**: Create the images with blurring technique.
-- **Dimensional Reduction Algorithm (-alg)**: t-SNE is used.
-- **Blurring option (-oB)**: Create de images with maximum value of overlaping pixel
-- **Image size (-px)**: 30x30 pixels
-- **Blurring steps (-sB)**: Expand 5 pixels the blurring.
-
-<div>
-<p align = "center">
-<kbd><img src="imgs/blurring.png" alt="TINTO blurring" width="250"></kbd>
-</p>
-</div>
+## More information
+- [TINTOlib Crash Course](https://github.com/oeg-upm/TINTOlib-Crash_Course)
+- For more detailed information, refer to the **[TINTOlib ReadTheDocs](https://tintolib.readthedocs.io/en/latest/)**.  
+- GitHub repository: **[TINTOlib Documentation](https://github.com/oeg-upm/TINTOlib-Documentation)**.
+- PyPI: **[PyPI](https://pypi.org/project/TINTOlib/)**.
 
 ## License
 
