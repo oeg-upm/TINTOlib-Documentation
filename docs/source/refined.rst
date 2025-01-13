@@ -92,7 +92,7 @@ Functions
 
 Citation
 ------
-**Paper**: https://www.nature.com/articles/s41467-020-18197-y
+**Paper**: https://doi.org/10.1038/s41467-020-18197-y
 
 **Code Repository**: https://github.com/omidbazgirTTU/REFINED
 
