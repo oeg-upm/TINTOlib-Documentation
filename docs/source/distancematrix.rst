@@ -6,7 +6,7 @@ The DistanceMatrix method represents tabular data as a distance matrix, where pa
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/DistanceMatrix_zoom2_005854_zoom.png
    :width: 100px
    :align: center
-   :caption: DistanceMatrix method where distances represent feature relationships.
+   :alt: DistanceMatrix method where distances represent feature relationships.
 
 
 Import DistanceMatrix

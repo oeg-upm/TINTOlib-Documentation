@@ -6,7 +6,7 @@ The REFINED method converts tabular data into images while maintaining the origi
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/REFINED_000100_zoom.png
    :width: 100px
    :align: center
-   :caption: Example of a synthetic image from the REFINED method, highlighting optimized feature placement.
+   :alt: Example of a synthetic image from the REFINED method, highlighting optimized feature placement.
 
 
 Import REFINED

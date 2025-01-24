@@ -6,7 +6,7 @@ The FeatureWrap method transforms tabular data into synthetic images by encoding
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/FeatureWrap_264844_zoom.png
    :width: 100px
    :align: center
-   :caption: FeatureWrap method image, encoding features as binary vectors transformed into pixel values.
+   :alt: FeatureWrap method image, encoding features as binary vectors transformed into pixel values.
 
 
 Import FeatureWrap

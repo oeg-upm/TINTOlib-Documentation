@@ -6,7 +6,7 @@ The Combination method merges the Equidistant Bar Graph and the Normalized Dista
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/Combination_zoom2_005854_zoom.png
    :width: 100px
    :align: center
-   :caption: Combination method image, integrating features of the BarGraph and DistanceMatrix methods.
+   :alt: Combination method image, integrating features of the BarGraph and DistanceMatrix methods.
 
 
 Import Combination

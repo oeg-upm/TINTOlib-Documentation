@@ -6,7 +6,7 @@ The TINTO method transforms tabular data into images by first reducing dimension
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/TINTO_blur_maximum_000100_zoom.png
    :width: 100px
    :align: center
-   :caption: Synthetic image generated using the TINTO method with maximum blurring.
+   :alt: Synthetic image generated using the TINTO method with maximum blurring.
 
 
 Import TINTO

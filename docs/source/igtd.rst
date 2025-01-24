@@ -7,7 +7,7 @@ The Image Generator for Tabular Data (IGTD) method transforms tabular data into 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/IGTD_40x40_fEuclidean_iEuclidean_abs_000100_zoom.png
    :width: 100px
    :align: center
-   :caption: Synthetic image produced by the IGTD method.
+   :alt: Synthetic image produced by the IGTD method.
 
 
 Import IGTD
