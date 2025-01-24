@@ -3,9 +3,11 @@ TINTO
 
 The TINTO method transforms tabular data into images by first reducing dimensions using PCA or t-SNE, then mapping features to a 2D grid based on their center of gravity. It finalizes pixel positions by rounding coordinates and applies a blurring effect to blend feature values into neighboring pixels.
 
-.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/BarGraph_zoom2_005854_zoom.png
-   :width: 300px
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/TINTO_blur_maximum_000100_zoom.png
+   :width: 100px
    :align: center
+   :caption: Synthetic image generated using the TINTO method with maximum blurring.
+
 
 Import TINTO
 ----------------

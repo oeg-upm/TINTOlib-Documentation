@@ -2,11 +2,13 @@ IGTD
 =====
 
 
-The Image Generator for Tabular Data (IGTD) method converts tabular data into images by organizing features based on their similarity. It starts by generating a similarity matrix using methods like Pearson or Spearman correlation to assess how features behave relative to each other. Then, it calculates a physical distance matrix for the pixel positions in the image. Finally, IGTD reorders the features to align the similarity and distance matrices, optimizing the placement through iterative adjustments.
+The Image Generator for Tabular Data (IGTD) method transforms tabular data into images by arranging features according to their similarity. Initially, it creates a similarity matrix using techniques such as Pearson or Spearman correlation to evaluate the relationships between features. Subsequently, it computes a matrix that represents the spatial distances between pixel positions in the image. Finally, IGTD rearranges the features to ensure that the layout of the similarity matrix closely matches the spatial arrangement in the image, refining the placement iteratively.
 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/IGTD_40x40_fEuclidean_iEuclidean_abs_000100_zoom.png
-   :width: 300px
+   :width: 100px
    :align: center
+   :caption: Synthetic image produced by the IGTD method.
+
 
 Import IGTD
 ----------------
