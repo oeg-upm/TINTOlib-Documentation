@@ -62,11 +62,17 @@ Functions
 
         - filename: .pkl file path
      -
-   * - :py:data:`generateImages(data, folder)`
-     - Generate one image per instance and group by class in different folder
+   * - :py:data:`generateImages_fit(data, folder)`
+     - Fits the model and generates one synthetic image per instance, organizing them into folders grouped by class
 
-        - data: path of the CSV or pandas dataframe
-        - folder: path of the folder to save results
+        - data: Path to the CSV file or a pandas DataFrame containing the input data
+        - folder: Path to the destination folder where the generated images will be saved
+     - Folders with synthetic images
+   * - :py:data:`generateImages_pred(data, folder)`
+     - Generates one synthetic image per instance without fitting a model, organizing them into folders grouped by class
+
+        - data: Path to the CSV file or a pandas DataFrame containing the input data
+        - folder: Path to the destination folder where the generated images will be saved
      - Folders with synthetic images
 
 
@@ -74,7 +80,7 @@ Functions
 
 Citation
 ------
-**Paper**:
+**Paper**: https://doi.org/10.1038/s41598-022-26378-6
 
-**Code Repository**:
+**Code Repository**: https://github.com/anuraganands/Non-image-data-classification-with-CNN
 
