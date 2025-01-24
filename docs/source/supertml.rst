@@ -11,7 +11,7 @@ The SuperTML method transforms tabular data into images by drawing data values d
 
 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/SuperTML-EF_005854_zoom.png
-   :width: 100px
+   :width: 200px
    :align: center
    :alt: Synthetic image generated using the SuperTML-EF method, featuring uniform font size for all features.
 

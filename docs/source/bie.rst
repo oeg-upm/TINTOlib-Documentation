@@ -5,7 +5,7 @@ The Binary Image Encoding (BIE) method converts numeric values into black-and-wh
 
 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/BIE_000000_zoom.png
-   :width: 100px
+   :width: 200px
    :align: center
    :alt: BIE method image, depicting binary encoded floating-point representations as black and white pixels.
 
