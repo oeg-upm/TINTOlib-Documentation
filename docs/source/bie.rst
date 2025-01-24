@@ -9,6 +9,7 @@ The Binary Image Encoding (BIE) method converts numeric values into black-and-wh
    :align: center
    :alt: BIE method image, depicting binary encoded floating-point representations as black and white pixels.
 
+---
 
 Import BIE
 ----------------

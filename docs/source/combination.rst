@@ -8,6 +8,7 @@ The Combination method merges the Equidistant Bar Graph and the Normalized Dista
    :align: center
    :alt: Combination method image, integrating features of the BarGraph and DistanceMatrix methods.
 
+---
 
 Import Combination
 ----------------

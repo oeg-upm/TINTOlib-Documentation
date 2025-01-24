@@ -9,6 +9,7 @@ The Image Generator for Tabular Data (IGTD) method transforms tabular data into 
    :align: center
    :alt: Synthetic image produced by the IGTD method.
 
+---
 
 Import IGTD
 ----------------
