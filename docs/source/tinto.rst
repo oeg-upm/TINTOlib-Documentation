@@ -8,7 +8,7 @@ The TINTO method transforms tabular data into images by first reducing dimension
    :align: center
    :alt: Synthetic image generated using the TINTO method with maximum blurring.
 
----
+
 
 Import TINTO
 ----------------

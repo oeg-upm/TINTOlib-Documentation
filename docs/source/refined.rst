@@ -8,7 +8,7 @@ The REFINED method converts tabular data into images while maintaining the origi
    :align: center
    :alt: Example of a synthetic image from the REFINED method, highlighting optimized feature placement.
 
----
+
 
 Import REFINED
 ----------------

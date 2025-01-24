@@ -8,7 +8,7 @@ The BarGraph method transforms tabular data into grayscale images by representin
    :align: center
    :alt: Image created by the BarGraph method, visualizing data as a series of bars.
 
----
+
 
 Import BarGraph
 ----------------

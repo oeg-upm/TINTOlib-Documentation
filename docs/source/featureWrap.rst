@@ -8,7 +8,7 @@ The FeatureWrap method transforms tabular data into synthetic images by encoding
    :align: center
    :alt: FeatureWrap method image, encoding features as binary vectors transformed into pixel values.
 
----
+
 
 Import FeatureWrap
 ----------------

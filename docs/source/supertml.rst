@@ -15,7 +15,7 @@ The SuperTML method transforms tabular data into images by drawing data values d
    :align: center
    :alt: Synthetic image generated using the SuperTML-EF method, featuring uniform font size for all features.
 
----
+
 
 Import SuperTML
 ----------------

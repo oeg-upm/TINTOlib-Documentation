@@ -8,7 +8,7 @@ The DistanceMatrix method represents tabular data as a distance matrix, where pa
    :align: center
    :alt: DistanceMatrix method where distances represent feature relationships.
 
----
+
 
 Import DistanceMatrix
 ----------------
