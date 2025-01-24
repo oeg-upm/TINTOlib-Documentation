@@ -1,6 +1,11 @@
 REFINED
 =====
 
+The REFINED method transforms tabular data into images by preserving the original spatial relationships between features using Multidimensional Scaling (MDS) and Bayesian MDS. It starts with a distance matrix to establish a feature map, then optimizes placement using a hill climbing algorithm and iterative permutations to minimize Euclidean distance discrepancies. 
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/REFINED_000100_zoom.png
+   :width: 300px
+   :align: center
+
 Import REFINED
 ----------------
 To import REFINED model use:

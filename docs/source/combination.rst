@@ -1,6 +1,12 @@
 Combination
 =====
 
+The Combination method merges the Equidistant Bar Graph and the Normalized Distance Matrix approaches into a single RGB image, enriching the visual representation of the data. Each channel in the RGB format highlights different aspects: one for individual variable magnitudes, and others for the relationships between variables.
+
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/Combination_zoom2_005854_zoom.png
+   :width: 300px
+   :align: center
+
 Import Combination
 ----------------
 To import Combination model use:

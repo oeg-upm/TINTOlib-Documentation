@@ -1,6 +1,19 @@
 SuperTML
 =====
 
+The SuperTML method transforms tabular data into images by drawing data values directly onto a single-channel (black and white) image. Each feature is assigned a specific region on the image, depicted either as text or a numerical representation. SuperTML offers two distinct variations:
+
+1. **SuperTML_EF (Equal Font)**:
+   - This approach assigns equally sized regions for each feature and uses a uniform font size across the image, ensuring that all features are treated equally in terms of visual representation.
+
+2. **SuperTML_VF (Variable Font)**:
+   - In this variation, the size of the region and the font size are adjusted based on the feature's importance. More significant features receive larger regions and font sizes, highlighting key features more prominently.
+
+
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/SuperTML-EF_005854_zoom.png
+   :width: 300px
+   :align: center
+
 Import SuperTML
 ----------------
 To import SuperTML model use:

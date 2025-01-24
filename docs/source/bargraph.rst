@@ -1,6 +1,12 @@
 BarGraph
 =====
 
+The BarGraph method transforms tabular data into grayscale images by representing features as equidistant bars, each scaled according to its normalized value.
+
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/BarGraph_zoom2_005854_zoom.png
+   :width: 300px
+   :align: center
+
 Import BarGraph
 ----------------
 To import BarGraph model use:

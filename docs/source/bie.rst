@@ -1,6 +1,13 @@
 BIE
 =====
 
+The Binary Image Encoding (BIE) method converts numeric values into black-and-white images by using the binary floating-point representation of numbers according to the IEEE 754 standard. Numeric values are encoded into binary, with each bit translated into image pixels: 0s as black (0) and 1s as white (255). 
+
+
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/BIE_000000_zoom.png
+   :width: 300px
+   :align: center
+
 Import BIE
 ----------------
 To import the BIE model, use:
