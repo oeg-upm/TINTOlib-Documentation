@@ -34,7 +34,7 @@ When creating the :py:class:`SuperTML` class, some parameters can be modified. T
      - Show execution details in the terminal.
      - False
      - [True, False]
-   * - :py:data:`image_pixels`
+   * - :py:data:`pixels`
      - The number of pixels used to create the image (one side), total pixels = pixels * pixels.
      - 224
      - integer
