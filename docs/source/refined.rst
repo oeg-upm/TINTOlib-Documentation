@@ -17,6 +17,39 @@ To import REFINED model use:
 >>> from TINTOlib.refined import REFINED
 >>> model = REFINED()
 
+⚠️ Parallel Computation (mpi4py)
+-----------------------------
+
+REFINED uses ``mpi4py`` for parallel computation with MPI (Message Passing Interface). This requires different setup depending on your operating system.
+
+**Linux**
+
+Ensure the MPI environment is installed before ``mpi4py``:
+
+.. code-block:: bash
+
+   sudo apt-get install python3
+   sudo apt install python3-pip
+   sudo apt install python3-mpi4py
+
+Then install ``mpi4py``:
+
+.. code-block:: bash
+
+   pip install mpi4py
+
+**macOS / Windows**
+
+Installation is usually direct:
+
+.. code-block:: bash
+
+   pip install mpi4py
+
+**Google Colab**
+
+Due to environment limitations, REFINED is **not compatible with Google Colab**, as it cannot utilize multiple processors via MPI.
+
 Hyperparameters & Configuration
 ---------------
 
