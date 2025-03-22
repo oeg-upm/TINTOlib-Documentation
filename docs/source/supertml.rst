@@ -24,6 +24,37 @@ To import SuperTML model use:
 >>> from TINTOlib.supertml import SuperTML
 >>> model = SuperTML()
 
+⚠️ Font Requirements
+-----------------
+
+SuperTML generates text-based synthetic images and depends on the **MS Sans Serif** font for correct rendering.
+
+- On **Windows**, this font is typically available by default.
+- On **Linux** and **macOS**, it must be installed manually to avoid rendering issues when generating the images.
+
+To ensure the font is available:
+
+**Linux**
+
+Install the Microsoft Core Fonts:
+
+.. code-block:: bash
+
+   sudo apt install ttf-mscorefonts-installer
+
+**macOS**
+
+Use Homebrew to install the Microsoft Sans Serif font:
+
+.. code-block:: bash
+
+   brew tap homebrew/cask-fonts
+   brew install --cask font-microsoft-sans-serif
+
+**Google Colab**
+
+On **Google Colab**, installing additional fonts such as MS Sans Serif is not permitted due to administrative restrictions. SuperTML is therefore **not compatible** with Colab unless fonts are already embedded or image rendering is customized.
+
 Hyperparameters & Configuration
 ---------------
 
