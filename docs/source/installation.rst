@@ -15,6 +15,15 @@ To use TINTOlib, first install it using `PyPi <https://pypi.org/project/TINTOlib
 
 For more details, visit: TINTOlib on PyPI <https://pypi.org/project/TINTOlib>
 
+Additional Resources
+####################
+
+- `TINTOlib Crash Course <https://github.com/oeg-upm/TINTOlib-Crash_Course/tree/main>`_  
+  Hands-on notebooks and slides showing how to use CNNs, ViTs, and Hybrid Neural Networks (HyNNs) with TINTOlib.
+
+- `TINTOlib GitHub Repository <https://github.com/oeg-upm/TINTOlib>`_  
+  Main codebase with transformation methods, examples, and full documentation.
+
 Importing Methods
 ----------------
 TINTOlib offers a variety of state-of-the-art methods for constructing synthetic images from tabular data. To use these methods, import the required models as shown below:
