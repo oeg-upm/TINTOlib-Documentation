@@ -264,6 +264,8 @@ For example, the following table shows a classic example of the [IRIS CSV datase
 </p>
 </div>
 
+---
+
 ## 🚀 Vision-based Neural Network Architectures
 
 Using synthetic images, experiment with either vision models like CNNs or ViTs, and explore hybrid models. Below are the architectures that will be presented, and the ones you will modify and use during the session:
@@ -272,7 +274,7 @@ Using synthetic images, experiment with either vision models like CNNs or ViTs, 
   ![Tabular-to-Image CNN](3_Images/Tabular-to-image-CNN.jpg)
 
 - **Synthetic images using Hybrid Neural Network with ViT (HyViT)**  
-  ![Tabular-to-Image HyNNViT](3_Images/Tabular-to-image-HyNNViT.jpg)
+  ![Tabular-to-Image HyNNViT](3_Images/HybridViT.png)
 
 ---
 
