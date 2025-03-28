@@ -279,6 +279,39 @@ For example, the following table shows a classic example of the [IRIS CSV datase
 
 ---
 
+## 🧪 Citing TINTO: 
+
+If you used TINTO in your work, please cite the **[SoftwareX](https://doi.org/10.1016/j.softx.2023.101391)**:
+
+```bib
+@article{softwarex_TINTO,
+    title = {TINTO: Converting Tidy Data into Image for Classification with 2-Dimensional Convolutional Neural Networks},
+    journal = {SoftwareX},
+    author = {Manuel Castillo-Cara and Reewos Talla-Chumpitaz and Raúl García-Castro and Luis Orozco-Barbosa},
+    volume={22},
+    pages={101391},
+    year = {2023},
+    issn = {2352-7110},
+    doi = {https://doi.org/10.1016/j.softx.2023.101391}
+}
+```
+
+And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022.10.011)** 
+
+```bib
+@article{inffus_TINTO,
+    title = {A novel deep learning approach using blurring image techniques for Bluetooth-based indoor localisation},
+    journal = {Information Fusion},
+    author = {Reewos Talla-Chumpitaz and Manuel Castillo-Cara and Luis Orozco-Barbosa and Raúl García-Castro},
+    volume = {91},
+    pages = {173-186},
+    year = {2023},
+    issn = {1566-2535},
+    doi = {https://doi.org/10.1016/j.inffus.2022.10.011}
+}
+```
+
+---
 ## 🛡️ License
 
 TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)**.
