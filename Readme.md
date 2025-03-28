@@ -220,10 +220,7 @@ To generate synthetic images, use the following workflow with the `fit`, `transf
 
 ## 📚 Documentation
 
-For detailed usage, examples, and tutorials, visit the **[TINTOlib Documentation](https://tintolib.readthedocs.io/en/latest/)**.
-
-### How to use TINTOlib - Google Colab crash course
-To get started with **TINTOlib**, a dedicated **[crash course repository](https://github.com/oeg-upm/TINTOlib-Crash_Course)** is available. It includes videoturials, slides and Jupyter Notebooks that demonstrate how to apply state-of-the-art vision models like Vision Transformers (ViTs), Convolutional Neural Networks (CNNs) and Hybrid Neural Networks to problems.
+To get started with **TINTOlib**, a dedicated **[Crash Course Repository](https://github.com/oeg-upm/TINTOlib-Crash_Course)** is available. It includes videoturials, slides and Jupyter Notebooks that demonstrate how to apply state-of-the-art vision models like Vision Transformers (ViTs), Convolutional Neural Networks (CNNs) and Hybrid Neural Networks to problems.
 <!--It includes:
 
 - **Slides and Jupyter notebooks** demonstrating how to:
@@ -236,8 +233,6 @@ To get started with **TINTOlib**, a dedicated **[crash course repository](https:
 
 This architecture leverages the strengths of both tabular and image-based data representations, enabling improved performance on complex machine learning tasks. The repository is ideal for those looking to integrate image-based deep learning techniques into tabular data workflows.
 -->
-
-### An Example to transform Tidy Data into synthetic image
 
 For example, the following table shows a classic example of the [IRIS CSV dataset](https://archive.ics.uci.edu/ml/datasets/iris) as it should look like for the run:
 
@@ -312,6 +307,7 @@ And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022
 ```
 
 ---
+
 ## 🛡️ License
 
 TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-upm/TINTOlib-Documentation/blob/main/LICENSE)**.
@@ -319,10 +315,10 @@ TINTOlib is available under the **[Apache License 2.0](https://github.com/oeg-up
 ## 👥 Authors
 - **[Manuel Castillo-Cara](https://github.com/manwestc)**
 - **[Raúl García-Castro](https://github.com/rgcmme)**
-- **[Borja Reinoso](https://github.com/borjarei) -[borjareinoso@gmail.com](borjareinoso@gmail.com)**
 - **[David González Fernández](https://github.com/DavidGonzalezFernandez)**
 - **[Jiayun Liu](https://github.com/DCY1117)**
 
+---
 
 ## 🏛️ Contributors
 
