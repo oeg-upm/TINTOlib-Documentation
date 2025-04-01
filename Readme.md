@@ -288,7 +288,7 @@ Using synthetic images, experiment with either vision models like CNNs or ViTs, 
 
 ## 🧪 Citing TINTO: 
 
-If you used TINTOlib with Hybrid Neural Networks in your work, please cite the **[IEEE Journal of Selected Topics in Signal Processing](https://doi.org/10.1109/JSTSP.2025.3555067){:target="_blank"}**:
+If you used TINTOlib with Hybrid Neural Networks in your work, please cite the **[IEEE Journal of Selected Topics in Signal Processing](https://doi.org/10.1109/JSTSP.2025.3555067)**:
 
 ```bib
 @ARTICLE{10946146,
