@@ -79,6 +79,19 @@ And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022
 }
 ```
 -->
+
+---
+
+## 🔎 Explore with DeepWiki
+
+TINTOlib cuenta con una página en **[DeepWiki](https://deepwiki.com/oeg-upm/TINTOlib)**, una plataforma semántica para explorar documentación, preguntas frecuentes, publicaciones relevantes y funcionalidades clave del proyecto.
+
+<p align="center">
+  <a href="https://deepwiki.com/oeg-upm/TINTOlib" target="_blank">
+    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"/>
+  </a>
+</p>
+
 ---
 
 ## 📚 Features
