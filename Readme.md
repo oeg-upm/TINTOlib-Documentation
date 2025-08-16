@@ -296,7 +296,6 @@ Using synthetic images, experiment with either vision models like CNNs or ViTs, 
 ## 💬 More information
 
 - For more detailed information, refer to the **[TINTOlib ReadTheDocs](https://tintolib.readthedocs.io/en/latest/)**.  
-- GitHub repository: **[TINTOlib Documentation](https://github.com/oeg-upm/TINTOlib-Documentation)**.
 - PyPI: **[PyPI](https://pypi.org/project/TINTOlib/)**.
 
 ---
