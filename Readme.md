@@ -13,8 +13,11 @@
 <div>
     <p align = "center">
     <img src="https://raw.githubusercontent.com/DCY1117/TEMP-Images/refs/heads/main/TINTOlib-images/logo.svg" alt="TINTO Logo" width="150">
+    <a href="https://pepy.tech/projects/tintolib"><img src="https://static.pepy.tech/badge/tintolib" alt="PyPI Downloads"></a>
     </p>
 </div>
+
+
 
 ## 🎉 New Free Course on Udemy! (Spanish) 🎉
 
