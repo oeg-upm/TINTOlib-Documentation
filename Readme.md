@@ -13,7 +13,6 @@
 <div>
     <p align = "center">
     <img src="https://raw.githubusercontent.com/DCY1117/TEMP-Images/refs/heads/main/TINTOlib-images/logo.svg" alt="TINTO Logo" width="150">
-    <a href="https://pepy.tech/projects/tintolib"><img src="https://static.pepy.tech/badge/tintolib" alt="PyPI Downloads"></a>
     </p>
 </div>
 
@@ -301,11 +300,30 @@ Using synthetic images, experiment with either vision models like CNNs or ViTs, 
 - For more detailed information, refer to the **[TINTOlib ReadTheDocs](https://tintolib.readthedocs.io/en/latest/)**.  
 - PyPI: **[PyPI](https://pypi.org/project/TINTOlib/)**.
 
+
 ---
 
-## 🧪 Citing TINTO: 
+## 📖 Citation
 
-If you used TINTOlib with Hybrid Neural Networks in your work, please cite the **[IEEE Journal of Selected Topics in Signal Processing](https://doi.org/10.1109/JSTSP.2025.3555067)**:
+If you use TINTOlib in your research, please cite our paper en [SoftwareX journal](https://doi.org/10.1016/j.softx.2025.102444):
+
+```bibtex
+@article{LIU2025102444,
+  title = {TINTOlib: A Python library for transforming tabular data into synthetic images for deep neural networks},
+  journal = {SoftwareX},
+  volume = {32},
+  pages = {102444},
+  year = {2025},
+  issn = {2352-7110},
+  doi = {https://doi.org/10.1016/j.softx.2025.102444}
+}
+```
+
+----
+
+## 🧪 Citing TINTO Method: 
+
+If you used TINTO method with Hybrid Neural Networks in your work, please cite the **[IEEE Journal of Selected Topics in Signal Processing](https://doi.org/10.1109/JSTSP.2025.3555067)**:
 
 ```bib
 @ARTICLE{10946146,
