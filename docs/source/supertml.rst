@@ -1,36 +1,33 @@
 SuperTML
-=====
+========
 
-The SuperTML method transforms tabular data into images by drawing data values directly onto a single-channel (black and white) image. Each feature is assigned a specific region on the image, depicted either as text or a numerical representation. SuperTML offers two distinct variations:
+The SuperTML method transforms tabular data into synthetic images by drawing data values directly onto a 3-channel (RGB) image. Each feature is assigned a specific region on the image, depicted as text representing the numerical value. SuperTML offers two distinct variations:
 
 1. **SuperTML_EF (Equal Font)**:
    - This approach assigns equally sized regions for each feature and uses a uniform font size across the image, ensuring that all features are treated equally in terms of visual representation.
 
 2. **SuperTML_VF (Variable Font)**:
-   - In this variation, the size of the region and the font size are adjusted based on the feature's importance. More significant features receive larger regions and font sizes, highlighting key features more prominently.
-
+   - In this variation, the size of the region and the font size are adjusted based on the feature's importance (calculated via Random Forest). More significant features receive larger regions and font sizes, highlighting key features more prominently.
 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/SuperTML-EF_005854_zoom.png
    :width: 200px
    :align: center
    :alt: Synthetic image generated using the SuperTML-EF method, featuring uniform font size for all features.
 
-
-
 Import SuperTML
-----------------
+---------------
 To import SuperTML model use:
 
 >>> from TINTOlib.supertml import SuperTML
 >>> model = SuperTML()
 
 ⚠️ Font Requirements
------------------
+--------------------
 
-SuperTML generates text-based synthetic images and depends on the **MS Sans Serif** font for correct rendering.
+SuperTML generates text-based synthetic images and strictly requires the **Arial** font (`arial.ttf`) for correct rendering.
 
 - On **Windows**, this font is typically available by default.
-- On **Linux** and **macOS**, it must be installed manually to avoid rendering issues when generating the images.
+- On **Linux** and **macOS**, it must be installed manually if not present to avoid `OSError: cannot open resource` when generating images.
 
 To ensure the font is available:
 
@@ -44,22 +41,21 @@ Install the Microsoft Core Fonts:
 
 **macOS**
 
-Use Homebrew to install the Microsoft Sans Serif font:
+Use Homebrew to install the fonts:
 
 .. code-block:: bash
 
    brew tap homebrew/cask-fonts
-   brew install --cask font-microsoft-sans-serif
+   brew install --cask font-arial
 
 **Google Colab**
 
-On **Google Colab**, installing additional fonts such as MS Sans Serif is not permitted due to administrative restrictions. SuperTML is therefore **not compatible** with Colab unless fonts are already embedded or image rendering is customized.
+On **Google Colab**, you may need to upload `arial.ttf` to the working directory or install the font package, as it is not always available by default.
 
 Hyperparameters & Configuration
----------------
+-------------------------------
 
 When creating the :py:class:`SuperTML` class, some parameters can be modified. The parameters are:
-
 
 .. list-table::
    :widths: 20 40 20 20
@@ -71,41 +67,38 @@ When creating the :py:class:`SuperTML` class, some parameters can be modified. T
      - Valid values
    * - :py:data:`problem`
      - The type of problem, defining how the images are grouped.
-     - 'supervised'
-     - ['supervised', 'unsupervised', 'regression']
-   * - :py:data:`normalize`
-     - If True, normalizes input data using MinMaxScaler.
-     - True
-     - [True, False]
+     - 'classification'
+     - ['classification', 'unsupervised', 'regression']
+   * - :py:data:`transformer`
+     - Preprocessing transformations like scaling, normalization, etc.
+     - MinMaxScaler()
+     - Scikit Learn transformers or custom implementation inheriting CustomTransformer.
    * - :py:data:`verbose`
      - Show execution details in the terminal.
      - False
      - [True, False]
    * - :py:data:`pixels`
-     - The number of pixels used to create the image (one side), total pixels = pixels * pixels.
+     - The number of pixels used to create the image (one side). Total pixels = pixels * pixels.
      - 224
      - integer
    * - :py:data:`feature_importance`
-     - If False, SuperTML-EF (Equal Font) is used, where all features are displayed with equal font sizes. If True, SuperTML-VF (Variable Font) is used, where the font size of each feature is proportional to its importance.
+     - If False, SuperTML-EF (Equal Font) is used. If True, SuperTML-VF (Variable Font) is used, scaling font size by feature importance.
      - False
      - [True, False]
    * - :py:data:`font_size`
-     - The size of the font used to render text on the generated images.
+     - The base size of the font used to render text on the generated images.
      - 10
      - integer
    * - :py:data:`random_seed`
-     - Seed for reproducibility; the method uses random forest for feature importance.
+     - Seed for reproducibility.
      - 1
      - integer
 
-
-
-
 Code example:
 
->>> model = SuperTML(problem='regression')
+>>> model = SuperTML(problem='regression', feature_importance=True, pixels=224, font_size=12)
 
-All the parameters that aren't expecifically setted will have their default values.
+All the parameters that aren't specifically set will have their default values.
 
 Functions
 ---------
@@ -122,37 +115,32 @@ SuperTML has the following functions:
      - Allows to save the defined parameters (scale, fea_dost_method, image_dist_method, etc.)
      - .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load SuperTML configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
-        - filename: .pkl file path
+       - filename: .pkl file path
      -
    * - :py:data:`fit(data)`
      - Trains the model on the tabular data and prepares it for image generation.
 
-        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
+       - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
      -
    * - :py:data:`transform(data, folder)`
      - Generates and saves synthetic images in a specified folder. Requires the model to be fitted first.
 
-        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
-        - folder: Path to the folder where the synthetic images will be saved.
+       - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
+       - folder: Path to the folder where the synthetic images will be saved.
      - Folders with synthetic images
    * - :py:data:`fit_transform(data, folder)`
      - Combines the training and image generation steps. Fits the model to the data and generates synthetic images in one step.
 
-        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
-        - folder: Path to the folder where the synthetic images will be saved.
+       - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
+       - folder: Path to the folder where the synthetic images will be saved.
      - Folders with synthetic images
 
 - **The model must be fitted** before using the `transform` method. If the model isn't fitted, a `RuntimeError` will be raised.
 
-
-
-
-
 Citation
-------
+--------
 **Paper**: https://doi.ieeecomputersociety.org/10.1109/CVPRW.2019.00360
 
 **Code Repository**: https://github.com/GilesStrong/SuperTML_HiggsML_Test
-

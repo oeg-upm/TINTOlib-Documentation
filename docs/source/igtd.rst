@@ -1,6 +1,5 @@
 IGTD
-=====
-
+====
 
 The Image Generator for Tabular Data (IGTD) method transforms tabular data into images by arranging features according to their similarity. Initially, it creates a similarity matrix using techniques such as Pearson or Spearman correlation to evaluate the relationships between features. Subsequently, it computes a matrix that represents the spatial distances between pixel positions in the image. Finally, IGTD rearranges the features to ensure that the layout of the similarity matrix closely matches the spatial arrangement in the image, refining the placement iteratively.
 
@@ -9,20 +8,17 @@ The Image Generator for Tabular Data (IGTD) method transforms tabular data into 
    :align: center
    :alt: Synthetic image produced by the IGTD method.
 
-
-
 Import IGTD
-----------------
+-----------
 To import IGTD model use:
 
 >>> from TINTOlib.igtd import IGTD
 >>> model = IGTD()
 
 Hyperparameters & Configuration
----------------
+-------------------------------
 
 When creating the :py:class:`IGTD` class, some parameters can be modified. The parameters are:
-
 
 .. list-table::
    :widths: 20 40 20 20
@@ -34,12 +30,12 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - Valid values
    * - :py:data:`problem`
      - The type of problem, defining how the images are grouped.
-     - 'supervised'
-     - ['supervised', 'unsupervised', 'regression']
-   * - :py:data:`normalize`
-     - If True, normalizes input data using MinMaxScaler.
-     - True
-     - [True, False]
+     - 'classification'
+     - ['classification', 'unsupervised', 'regression']
+   * - :py:data:`transformer`
+     - Preprocessing transformations like scaling, normalization, etc.
+     - MinMaxScaler()
+     - Scikit Learn transformers or custom implementation inheriting CustomTransformer.
    * - :py:data:`verbose`
      - Show execution details in the terminal.
      - False
@@ -80,19 +76,24 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - Multiplication factor determining the size of the saved image relative to the original size.
      - 1
      - integer > 0
+   * - :py:data:`format`
+     - Output format using images with matplotlib with [0,255] range for pixel or using npy format.
+     - 'png'
+     - ['png', 'npy']
+   * - :py:data:`cmap`
+     - Color map to use with matplotlib.
+     - 'gray'
+     - 'viridis', 'plasma', 'inferno', 'magma', 'cividis', 'Greys', etc.
    * - :py:data:`random_seed`
      - Seed for reproducibility.
      - 1
      - integer
 
-
-
-
 Code example:
 
->>> model = IGTD(scale=[3,3],error="abs",val_step=60)
+>>> model = IGTD(scale=[3,3], error="abs", val_step=60, cmap='viridis')
 
-All the parameters that aren't expecifically setted will have their default values.
+All the parameters that aren't specifically set will have their default values.
 
 Functions
 ---------
@@ -106,41 +107,35 @@ IGTD has the following functions:
      - Description
      - Output
    * - :py:data:`saveHyperparameters(filename)`
-     - Allows to save the defined parameters (scale, fea_dost_method, image_dist_method, etc.)
+     - Allows to save the defined parameters.
      - .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load TINTO configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load IGTD configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
-        - filename: .pkl file path
+       - filename: .pkl file path
      -
    * - :py:data:`fit(data)`
-     - Trains the model on the tabular data and prepares it for image generation.
+     - Trains the model on the tabular data. This optimizes the feature arrangement matrix based on the chosen distance methods and error function.
 
-        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
+       - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
      -
    * - :py:data:`transform(data, folder)`
      - Generates and saves synthetic images in a specified folder. Requires the model to be fitted first.
 
-        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
-        - folder: Path to the folder where the synthetic images will be saved.
+       - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
+       - folder: Path to the folder where the synthetic images will be saved.
      - Folders with synthetic images
    * - :py:data:`fit_transform(data, folder)`
      - Combines the training and image generation steps. Fits the model to the data and generates synthetic images in one step.
 
-        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
-        - folder: Path to the folder where the synthetic images will be saved.
+       - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
+       - folder: Path to the folder where the synthetic images will be saved.
      - Folders with synthetic images
 
 - **The model must be fitted** before using the `transform` method. If the model isn't fitted, a `RuntimeError` will be raised.
 
-
-
-
-
-
-
 Citation
-------
+--------
 **Paper**: https://doi.org/10.1038/s41598-021-90923-y
 
 **Code Repository**: https://github.com/zhuyitan/igtd

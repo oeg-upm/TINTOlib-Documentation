@@ -1,57 +1,24 @@
-REFINED
-=======
+DeepInsight
+===========
 
-The REFINED method converts tabular data into images while maintaining the original spatial relationships between features. It begins by using Multidimensional Scaling (MDS) and Bayesian MDS to create a feature map from a distance matrix. Then, it employs a hill climbing algorithm along with iterative permutations to adjust feature placements, ensuring the Euclidean distances in the 2D image closely match those in the original dataset.
+The DeepInsight method transforms non-image tabular data into synthetic images by spatially arranging features based on their similarity. The process begins by applying dimensionality reduction techniques (such as t-SNE, PCA, or Kernel PCA) to project the feature space into a 2-dimensional plane. A convex hull algorithm is then employed to identify the smallest rectangle encompassing the feature points, which is subsequently rotated to align with the image axes. Finally, the feature values are mapped to the corresponding pixel locations within this grid. This structured arrangement ensures that correlated features are placed in proximity, enabling Convolutional Neural Networks (CNNs) to exploit local spatial dependencies effectively.
 
-.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/REFINED_000100_zoom.png
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/DEEPINSIGHT_CENTROIDS_000807.png
    :width: 200px
    :align: center
-   :alt: Example of a synthetic image from the REFINED method, highlighting optimized feature placement.
+   :alt: Image created by the DeepInsight method, visualizing data transformed using dimensionality reduction and convex hull framing.
 
-Import REFINED
---------------
-To import REFINED model use:
+Import DeepInsight
+------------------
+To import DeepInsight model use:
 
->>> from TINTOlib.refined import REFINED
->>> model = REFINED()
-
-⚠️ Parallel Computation (mpi4py)
---------------------------------
-
-REFINED uses ``mpi4py`` for parallel computation with MPI (Message Passing Interface). This requires different setup depending on your operating system.
-
-**Linux**
-
-Ensure the MPI environment is installed before ``mpi4py``:
-
-.. code-block:: bash
-
-   sudo apt-get install python3
-   sudo apt install python3-pip
-   sudo apt install python3-mpi4py
-
-Then install ``mpi4py``:
-
-.. code-block:: bash
-
-   pip install mpi4py
-
-**macOS / Windows**
-
-Installation is usually direct:
-
-.. code-block:: bash
-
-   pip install mpi4py
-
-**Google Colab**
-
-Due to environment limitations, REFINED is **not compatible with Google Colab**, as it cannot utilize multiple processors via MPI.
+>>> from TINTOlib.deepInsight import DeepInsight
+>>> model = DeepInsight(image_dim=30)
 
 Hyperparameters & Configuration
 -------------------------------
 
-When creating the :py:class:`REFINED` class, some parameters can be modified. The parameters are:
+When creating the :py:class:`DeepInsight` class, some parameters can be modified. The parameters are:
 
 .. list-table::
    :widths: 20 40 20 20
@@ -61,6 +28,10 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      - Description
      - Default value
      - Valid values
+   * - :py:data:`image_dim`
+     - Order size for a square matrix image.
+     - **Required**
+     - integer
    * - :py:data:`problem`
      - The type of problem, defining how the images are grouped.
      - 'classification'
@@ -73,14 +44,26 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      - Show execution details in the terminal.
      - False
      - [True, False]
-   * - :py:data:`hcIterations`
-     - Number of iterations for the hill climbing algorithm.
-     - 5
-     - integer >= 1
-   * - :py:data:`n_processors`
-     - The number of processors to use for the algorithm. Must be greater than 1.
-     - 8
-     - integer >= 2
+   * - :py:data:`algorithm_rd`
+     - Dimensionality reduction algorithm to determine feature coordinates.
+     - 'PCA'
+     - ['PCA', 't-SNE', 'kPCA']
+   * - :py:data:`assignment_method`
+     - Technique to map features to pixels.
+     - 'bin'
+     - str (e.g., 'bin')
+   * - :py:data:`relocate`
+     - Relocate features so that each pixel can represent a single feature (only if algorithm_rd is 'PCA').
+     - False
+     - [True, False]
+   * - :py:data:`algorithm_opt`
+     - Optimization algorithm applied in the pixel assignment stage.
+     - 'linear_sum'
+     - str (e.g., 'linear_sum')
+   * - :py:data:`group_method`
+     - Technique to calculate pixel values sharing multiple features.
+     - 'avg'
+     - 'avg'
    * - :py:data:`zoom`
      - Multiplication factor determining the size of the saved image relative to the original size.
      - 1
@@ -91,22 +74,22 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      - ['png', 'npy']
    * - :py:data:`cmap`
      - Color map to use with matplotlib.
-     - 'viridis'
+     - 'gray'
      - 'viridis', 'plasma', 'inferno', 'magma', 'cividis', 'Greys', etc.
    * - :py:data:`random_seed`
      - Seed for reproducibility.
-     - 1
+     - 23
      - integer
 
 Code example:
 
->>> model = REFINED(hcIterations=10, n_processors=4, cmap='magma')
+>>> model = DeepInsight(image_dim=50, algorithm_rd='t-SNE', cmap='viridis', random_seed=42)
 
 All the parameters that aren't specifically set will have their default values.
 
 Functions
 ---------
-REFINED has the following functions:
+DeepInsight has the following functions:
 
 .. list-table::
    :widths: 20 60 20
@@ -119,12 +102,12 @@ REFINED has the following functions:
      - Allows to save the defined parameters.
      - .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load REFINED configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load DeepInsight configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
        - filename: .pkl file path
      -
    * - :py:data:`fit(data)`
-     - Trains the model on the tabular data. This process involves running the hill climbing algorithm via MPI to determine feature mapping.
+     - Trains the model on the tabular data. This step performs dimensionality reduction to map features to the 2D grid.
 
        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
      -
@@ -145,6 +128,6 @@ REFINED has the following functions:
 
 Citation
 --------
-**Paper**: https://doi.org/10.1038/s41467-020-18197-y
+**Paper**: https://doi.org/10.1038/s41598-019-47765-6
 
-**Code Repository**: https://github.com/omidbazgirTTU/REFINED
+**Code Repository**: https://github.com/alok-ai-lab/pyDeepInsight

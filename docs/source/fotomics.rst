@@ -1,57 +1,24 @@
-REFINED
-=======
+Fotomics
+========
 
-The REFINED method converts tabular data into images while maintaining the original spatial relationships between features. It begins by using Multidimensional Scaling (MDS) and Bayesian MDS to create a feature map from a distance matrix. Then, it employs a hill climbing algorithm along with iterative permutations to adjust feature placements, ensuring the Euclidean distances in the 2D image closely match those in the original dataset.
+The Fotomics method transforms tabular data into synthetic images using the Fourier Transform. It computes the Fourier Transform of the input set, averages the real and imaginary values across samples to determine feature coordinates, and maps them to a 2D grid. This implementation extends the original method by allowing different mapping techniques, outlier treatments, and pixel value calculations.
 
-.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/REFINED_000100_zoom.png
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/FOTOMICS_OT19Z_GPAVG_000086.png
    :width: 200px
    :align: center
-   :alt: Example of a synthetic image from the REFINED method, highlighting optimized feature placement.
+   :alt: Image created by the Fotomics method, visualizing data transformed using the Fourier Transform.
 
-Import REFINED
---------------
-To import REFINED model use:
+Import Fotomics
+---------------
+To import Fotomics model use:
 
->>> from TINTOlib.refined import REFINED
->>> model = REFINED()
-
-⚠️ Parallel Computation (mpi4py)
---------------------------------
-
-REFINED uses ``mpi4py`` for parallel computation with MPI (Message Passing Interface). This requires different setup depending on your operating system.
-
-**Linux**
-
-Ensure the MPI environment is installed before ``mpi4py``:
-
-.. code-block:: bash
-
-   sudo apt-get install python3
-   sudo apt install python3-pip
-   sudo apt install python3-mpi4py
-
-Then install ``mpi4py``:
-
-.. code-block:: bash
-
-   pip install mpi4py
-
-**macOS / Windows**
-
-Installation is usually direct:
-
-.. code-block:: bash
-
-   pip install mpi4py
-
-**Google Colab**
-
-Due to environment limitations, REFINED is **not compatible with Google Colab**, as it cannot utilize multiple processors via MPI.
+>>> from TINTOlib.fotomics import Fotomics
+>>> model = Fotomics(image_dim=30)
 
 Hyperparameters & Configuration
 -------------------------------
 
-When creating the :py:class:`REFINED` class, some parameters can be modified. The parameters are:
+When creating the :py:class:`Fotomics` class, some parameters can be modified. The parameters are:
 
 .. list-table::
    :widths: 20 40 20 20
@@ -61,26 +28,54 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      - Description
      - Default value
      - Valid values
+   * - :py:data:`image_dim`
+     - Order size for a square matrix image.
+     - **Required**
+     - integer
    * - :py:data:`problem`
      - The type of problem, defining how the images are grouped.
      - 'classification'
      - ['classification', 'unsupervised', 'regression']
    * - :py:data:`transformer`
      - Preprocessing transformations like scaling, normalization, etc.
-     - MinMaxScaler()
+     - LogScaler()
      - Scikit Learn transformers or custom implementation inheriting CustomTransformer.
    * - :py:data:`verbose`
      - Show execution details in the terminal.
      - False
      - [True, False]
-   * - :py:data:`hcIterations`
-     - Number of iterations for the hill climbing algorithm.
-     - 5
-     - integer >= 1
-   * - :py:data:`n_processors`
-     - The number of processors to use for the algorithm. Must be greater than 1.
-     - 8
-     - integer >= 2
+   * - :py:data:`outliers`
+     - Treat outliers after Fourier transform.
+     - True
+     - [True, False]
+   * - :py:data:`min_percentile`
+     - Minimum percentile for outlier detection.
+     - 10
+     - integer
+   * - :py:data:`max_percentile`
+     - Maximum percentile for outlier detection.
+     - 90
+     - integer
+   * - :py:data:`outliers_treatment`
+     - Technique to treat outliers.
+     - 'zero'
+     - ['zero', 'max_min', 'avg']
+   * - :py:data:`assignment_method`
+     - Technique to map features to pixels.
+     - 'bin_digitize'
+     - str (e.g., 'bin_digitize')
+   * - :py:data:`relocate`
+     - Relocate features so that each pixel can represent a single feature.
+     - False
+     - [True, False]
+   * - :py:data:`algorithm_opt`
+     - Optimization algorithm applied in the pixel assignment stage.
+     - 'linear_sum'
+     - str (e.g., 'linear_sum')
+   * - :py:data:`group_method`
+     - Technique to calculate pixel values sharing multiple features.
+     - 'avg'
+     - str (e.g., 'avg')
    * - :py:data:`zoom`
      - Multiplication factor determining the size of the saved image relative to the original size.
      - 1
@@ -91,7 +86,7 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
      - ['png', 'npy']
    * - :py:data:`cmap`
      - Color map to use with matplotlib.
-     - 'viridis'
+     - 'gray'
      - 'viridis', 'plasma', 'inferno', 'magma', 'cividis', 'Greys', etc.
    * - :py:data:`random_seed`
      - Seed for reproducibility.
@@ -100,13 +95,13 @@ When creating the :py:class:`REFINED` class, some parameters can be modified. Th
 
 Code example:
 
->>> model = REFINED(hcIterations=10, n_processors=4, cmap='magma')
+>>> model = Fotomics(image_dim=30, outliers=False, zoom=2)
 
 All the parameters that aren't specifically set will have their default values.
 
 Functions
 ---------
-REFINED has the following functions:
+Fotomics has the following functions:
 
 .. list-table::
    :widths: 20 60 20
@@ -119,12 +114,12 @@ REFINED has the following functions:
      - Allows to save the defined parameters.
      - .pkl file with the configuration
    * - :py:data:`loadHyperparameters(filename)`
-     - Load REFINED configuration previously saved with :py:data:`saveHyperparameters(filename)`
+     - Load Fotomics configuration previously saved with :py:data:`saveHyperparameters(filename)`
 
        - filename: .pkl file path
      -
    * - :py:data:`fit(data)`
-     - Trains the model on the tabular data. This process involves running the hill climbing algorithm via MPI to determine feature mapping.
+     - Trains the model on the tabular data. This step computes the Fourier Transform and determines feature coordinates.
 
        - data: A path to a CSV file or a Pandas DataFrame containing the features and targets. The target column must be the last column.
      -
@@ -145,6 +140,6 @@ REFINED has the following functions:
 
 Citation
 --------
-**Paper**: https://doi.org/10.1038/s41467-020-18197-y
+**Paper**: https://doi.org/10.1007/s10462-022-10357-4
 
-**Code Repository**: https://github.com/omidbazgirTTU/REFINED
+**Code Repository**: https://github.com/VafaeeLab/Fotomics-Imagification

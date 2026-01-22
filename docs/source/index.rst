@@ -26,4 +26,5 @@ Contents
    supertml
    featureWrap
    bie
-
+   fotomics
+   deepInsight
