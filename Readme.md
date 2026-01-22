@@ -51,38 +51,6 @@ This hands-on tutorial includes **bilingual videos (English/Spanish)** and **pra
 
 **TINTOlib** is a state-of-the-art Python library that transforms **tidy data** (also known as tabular data) into **synthetic images**, enabling the application of advanced deep learning techniques, including **Vision Transformers (ViTs)** and **Convolutional Neural Networks (CNNs)**, to traditionally structured data. This transformation bridges the gap between tabular data and powerful vision-based machine learning models, unlocking new possibilities for tackling regression, classification, and other complex tasks.
 
-<!--
-**Citing TINTO**: If you used TINTO in your work, please cite the **[SoftwareX](https://doi.org/10.1016/j.softx.2023.101391)**:
-
-```bib
-@article{softwarex_TINTO,
-    title = {TINTO: Converting Tidy Data into Image for Classification with 2-Dimensional Convolutional Neural Networks},
-    journal = {SoftwareX},
-    author = {Manuel Castillo-Cara and Reewos Talla-Chumpitaz and Raúl García-Castro and Luis Orozco-Barbosa},
-    volume={22},
-    pages={101391},
-    year = {2023},
-    issn = {2352-7110},
-    doi = {https://doi.org/10.1016/j.softx.2023.101391}
-}
-```
-
-And use-case developed in **[INFFUS Paper](https://doi.org/10.1016/j.inffus.2022.10.011)** 
-
-```bib
-@article{inffus_TINTO,
-    title = {A novel deep learning approach using blurring image techniques for Bluetooth-based indoor localisation},
-    journal = {Information Fusion},
-    author = {Reewos Talla-Chumpitaz and Manuel Castillo-Cara and Luis Orozco-Barbosa and Raúl García-Castro},
-    volume = {91},
-    pages = {173-186},
-    year = {2023},
-    issn = {1566-2535},
-    doi = {https://doi.org/10.1016/j.inffus.2022.10.011}
-}
-```
--->
-
 ---
 
 ## 🔎 Explore TINTOlib with DeepWiki
@@ -100,7 +68,7 @@ TINTOlib has a dedicated space on **[DeepWiki](https://deepwiki.com/oeg-upm/TINT
 ## 📚 Features
 - Input formats: **CSV** or Pandas DataFrame
 - Designed for tidy data (**target column last**)
-- Output: grayscale images from reduction and transformation methods
+- Output: grayscale or RGB images from reduction and transformation methods
 - Compatible with **Linux, Windows, macOS**
 - Requires **Python 3.7+**
 
@@ -112,15 +80,17 @@ TINTOlib includes a variety of methods for generating synthetic images. Below is
 
 | Methods | Class | Hyperparameters |
 |:----------------------------------------------------------------:|:------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [TINTO](https://github.com/oeg-upm/TINTO) | `TINTO()` | `problem` `normalize` `verbose` `pixels` `algorithm` `blur` `submatrix` `amplification` `distance` `steps` `option` `times` `train_m` `zoom` `random_seed` |
-| [IGTD](https://github.com/zhuyitan/igtd) | `IGTD()` | `problem` `normalize` `verbose` `scale` `fea_dist_method` `image_dist_method` `error` `max_step` `val_step` `switch_t` `min_gain` `zoom` `random_seed` |
-| [REFINED](https://github.com/omidbazgirTTU/REFINED) | `REFINED()` | `problem` `normalize` `verbose` `hcIterations` `n_processors` `zoom` `random_seed` |
-| [BarGraph](https://github.com/anuraganands/Non-image-data-classification-with-CNN/) | `BarGraph()` | `problem` `normalize` `verbose` `pixel_width` `gap` `zoom` |
-| [DistanceMatrix](https://github.com/anuraganands/Non-image-data-classification-with-CNN/) | `DistanceMatrix()` | `problem` `normalize` `verbose` `zoom` |
-| [Combination](https://github.com/anuraganands/Non-image-data-classification-with-CNN/) | `Combination()` | `problem` `normalize` `verbose` `zoom` |
-| [SuperTML](https://github.com/GilesStrong/SuperTML_HiggsML_Test) | `SuperTML()` | `problem` `normalize` `verbose` `pixels` `feature_importance` `font_size` `random_seed` |
-| [FeatureWrap](https://link.springer.com/chapter/10.1007/978-3-319-70139-4_87) | `FeatureWrap()` | `problem` `normalize` `verbose` `size` `bins` `zoom` |
-| [BIE](https://ieeexplore.ieee.org/document/10278393) | `BIE()` | `problem` `normalize` `verbose` `precision` `zoom` |
+| [TINTO](https://github.com/oeg-upm/TINTO) | `TINTO()` | `problem` `transformer` `verbose` `pixels` `algorithm` `blur` `submatrix` `amplification` `distance` `steps` `option` `times` `train_m` `zoom` `format` `cmap` `random_seed` |
+| [IGTD](https://github.com/zhuyitan/igtd) | `IGTD()` | `problem` `transformer` `verbose` `scale` `fea_dist_method` `image_dist_method` `error` `max_step` `val_step` `switch_t` `min_gain` `zoom` `format` `cmap` `random_seed` |
+| [REFINED](https://github.com/omidbazgirTTU/REFINED) | `REFINED()` | `problem` `transformer` `verbose` `hcIterations` `n_processors` `zoom` `format` `cmap` `random_seed` |
+| [BarGraph](https://github.com/anuraganands/Non-image-data-classification-with-CNN/) | `BarGraph()` | `problem` `transformer` `verbose` `pixel_width` `gap` `zoom` |
+| [DistanceMatrix](https://github.com/anuraganands/Non-image-data-classification-with-CNN/) | `DistanceMatrix()` | `problem` `transformer` `verbose` `zoom` |
+| [Combination](https://github.com/anuraganands/Non-image-data-classification-with-CNN/) | `Combination()` | `problem` `transformer` `verbose` `zoom` |
+| [SuperTML](https://github.com/GilesStrong/SuperTML_HiggsML_Test) | `SuperTML()` | `problem` `transformer` `verbose` `pixels` `feature_importance` `font_size` `random_seed` |
+| [FeatureWrap](https://link.springer.com/chapter/10.1007/978-3-319-70139-4_87) | `FeatureWrap()` | `problem` `transformer` `verbose` `size` `bins` `zoom` |
+| [BIE](https://ieeexplore.ieee.org/document/10278393) | `BIE()` | `problem` `transformer` `verbose` `precision` `zoom` |
+| [Fotomics](https://github.com/VafaeeLab/Fotomics-Imagification) | `Fotomics()` | `image_dim` `problem` `transformer` `verbose` `outliers` `min_percentile` `max_percentile` `outliers_treatment` `assignment_method` `relocate` `algorithm_opt` `group_method` `zoom` `format` `cmap` `random_seed` |
+| [DeepInsight](https://github.com/alok-ai-lab/pyDeepInsight) | `DeepInsight()` | `image_dim` `problem` `transformer` `verbose` `algorithm_rd` `assignment_method` `relocate` `algorithm_opt` `group_method` `zoom` `format` `cmap` `random_seed` |
 
 ---
 
@@ -153,7 +123,7 @@ This method relies on `mpi4py`, which enables parallel computation using MPI (Me
 
 ### SuperTML
 
-The **SuperTML** method generates text-based synthetic images and requires the **MS Sans Serif** font.
+The **SuperTML** method generates text-based synthetic images and requires the **MS Sans Serif** font (or **Arial** as implemented in TINTOlib).
 
 - On **Windows**, this font is typically available by default.
 - On **Linux** and **macOS**, it must be installed manually to avoid rendering issues.
@@ -188,11 +158,6 @@ However, if you prefer manual installation or want to explore the full environme
 
 - To use a specific image transformation model, import it directly. For example, to use **TINTO**:
 
-    ```python
-      from TINTOlib.tinto import TINTO
-    ```
-
-- To import a specific model use: 
     ```python
       from TINTOlib.tinto import TINTO
     ```
