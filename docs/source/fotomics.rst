@@ -3,7 +3,7 @@ Fotomics
 
 The Fotomics method transforms tabular data into synthetic images using the Fourier Transform. It computes the Fourier Transform of the input set, averages the real and imaginary values across samples to determine feature coordinates, and maps them to a 2D grid. This implementation extends the original method by allowing different mapping techniques, outlier treatments, and pixel value calculations.
 
-.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/FOTOMICS_OT19Z_GPAVG_000170.png
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/FOTOMICS_OT19Z_GPAVG_000170_zoom.png
    :width: 200px
    :align: center
    :alt: Image created by the Fotomics method, visualizing data transformed using the Fourier Transform.
