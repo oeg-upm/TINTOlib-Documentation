@@ -15,6 +15,18 @@ To import Fotomics model use:
 >>> from TINTOlib.fotomics import Fotomics
 >>> model = Fotomics(image_dim=30)
 
+Inherited base functionality
+----------------------------
+
+Fotomics inherits from ``ParamImageMethod`` (see Base classes), so it also provides:
+
+* **Feature coordinates**: a feature-to-pixel mapping exported to
+  ``features_positions.csv`` after ``fit``/``fit_transform``.
+* **Programmatic access**: ``_get_features_mapping()`` returns the feature
+  coordinates as a DataFrame once the model is fitted.
+* **Shared utilities**: ``saveHyperparameters`` / ``loadHyperparameters`` and
+  the standard ``fit`` / ``transform`` / ``fit_transform`` workflow.
+
 Hyperparameters & Configuration
 -------------------------------
 

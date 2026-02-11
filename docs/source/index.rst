@@ -16,6 +16,7 @@ Contents
 
    
    installation
+   baseclasses
    dataformat
    tinto
    igtd

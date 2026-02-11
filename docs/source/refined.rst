@@ -15,6 +15,18 @@ To import REFINED model use:
 >>> from TINTOlib.refined import REFINED
 >>> model = REFINED()
 
+Inherited base functionality
+----------------------------
+
+REFINED inherits from ``MappingMethod`` (see Base classes), so it also provides:
+
+* **Feature coordinates**: a feature-to-pixel mapping exported to
+  ``features_positions.csv`` after ``fit``/``fit_transform``.
+* **Programmatic access**: ``_get_features_mapping()`` returns the feature
+  coordinates as a DataFrame once the model is fitted.
+* **Shared utilities**: ``saveHyperparameters`` / ``loadHyperparameters`` and
+  the standard ``fit`` / ``transform`` / ``fit_transform`` workflow.
+
 ⚠️ Parallel Computation (mpi4py)
 --------------------------------
 
