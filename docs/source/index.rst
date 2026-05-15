@@ -29,3 +29,4 @@ Contents
    bie
    fotomics
    deepInsight
+   clusters
