@@ -3,6 +3,11 @@ Clusters
 
 The Clusters method transforms tabular data into synthetic grayscale or multi-channel images by first learning a latent representation with clustering- or density-based unsupervised techniques, and then reshaping that representation into square image matrices.
 
+.. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/clusters.png
+   :width: 800px
+   :align: center
+   :alt: Image created by the clusters method.
+
 Import Clusters
 ---------------
 To import Clusters model use:
