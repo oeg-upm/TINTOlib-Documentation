@@ -7,13 +7,26 @@ This documentation provides detailed instructions on how to install, configure, 
 Installation
 ------------
 
-To use TINTOlib, first install it using `PyPi <https://pypi.org/project/TINTOlib>`_:
+TINTOlib requires Python 3.9 or later. Install the core package from `PyPI <https://pypi.org/project/TINTOlib>`_:
 
 .. code-block:: console
 
    (.venv) $ pip install TINTOlib
 
-For more details, visit: TINTOlib on PyPI <https://pypi.org/project/TINTOlib>
+Optional dependencies
+#####################
+
+Some methods require additional dependencies. Install only the extra needed for the methods you intend to use:
+
+.. code-block:: console
+
+   (.venv) $ pip install "TINTOlib[greedy]"
+   (.venv) $ pip install "TINTOlib[refined]"
+   (.venv) $ pip install "TINTOlib[all]"
+
+The ``greedy`` extra provides the greedy pixel-assignment backend used by parametric image methods. The ``refined`` extra provides MPI support for REFINED. The ``all`` extra installs both sets of optional dependencies.
+
+REFINED also requires a working MPI runtime on the operating system. Installing ``TINTOlib[refined]`` supplies the Python bindings but does not install the system MPI implementation.
 
 Additional Resources
 ####################
@@ -31,7 +44,7 @@ TINTOlib offers a variety of state-of-the-art methods for constructing synthetic
 >>> from TINTOlib.tinto import TINTO
 >>> from TINTOlib.igtd import IGTD
 
-All the methods requires the same input format and the responses outputs will have the same format.
+All methods use the same input format and produce outputs with the same folder structure.
 
 Available Methods
 -----------------

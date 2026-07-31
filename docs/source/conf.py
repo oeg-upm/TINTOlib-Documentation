@@ -10,8 +10,8 @@ project = 'TINTOlib'
 copyright = 'Manuel Castillo-Cara'
 author = 'Manuel Castillo-Cara'
 
-release = '0.1'
-version = '0.1.0'
+release = '1.3.0'
+version = '1.3'
 
 # -- General configuration
 

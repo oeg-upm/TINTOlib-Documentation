@@ -1,7 +1,9 @@
 DeepInsight
 ===========
 
-The DeepInsight method transforms non-image tabular data into synthetic images by spatially arranging features based on their similarity. The process begins by applying dimensionality reduction techniques (such as t-SNE, PCA, or Kernel PCA) to project the feature space into a 2-dimensional plane. A convex hull algorithm is then employed to identify the smallest rectangle encompassing the feature points, which is subsequently rotated to align with the image axes. Finally, the feature values are mapped to the corresponding pixel locations within this grid. This structured arrangement ensures that correlated features are placed in proximity, enabling Convolutional Neural Networks (CNNs) to exploit local spatial dependencies effectively. This implementation extends the original method by adding techniques for mapping features to pixels. Furthemore,  a new method to compute pixels values when using PCA is added
+The DeepInsight method transforms non-image tabular data into synthetic images by spatially arranging features based on their similarity. The process begins by applying a dimensionality reduction technique (PCA, t-SNE, or Kernel PCA) to project the feature space into a two-dimensional plane. A convex hull algorithm then identifies the minimum-area rectangle containing the projected points and rotates it to align with the image axes. Finally, feature values are mapped to their corresponding pixel locations. This structured arrangement places related features close together so that convolutional neural networks can exploit local spatial dependencies.
+
+When PCA is selected, DeepInsight can derive feature relevance from the absolute loadings of the first principal component. This relevance can be used to relocate colliding features or to calculate the value of a shared pixel as a relevance-weighted average.
 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/DEEPINSIGHT_CENTROIDS_000807_zoom.png
    :width: 200px
@@ -59,7 +61,7 @@ When creating the :py:class:`DeepInsight` class, some parameters can be modified
    * - :py:data:`algorithm_rd`
      - Dimensionality reduction algorithm to determine feature coordinates.
      - 'PCA'
-     - ['PCA', 't-SNE', 'kPCA']
+     - ['PCA', 't-SNE', 'KPCA']
    * - :py:data:`assignment_method`
      - Technique to map features to pixels.
      - 'bin'
@@ -75,7 +77,7 @@ When creating the :py:class:`DeepInsight` class, some parameters can be modified
    * - :py:data:`group_method`
      - Technique to calculate pixel values sharing multiple features.
      - 'avg'
-     - 'avg'
+     - ['avg', 'rev']. ``avg`` uses the arithmetic mean; ``rev`` uses a relevance-weighted mean and requires ``algorithm_rd='PCA'``.
    * - :py:data:`zoom`
      - Multiplication factor determining the size of the saved image relative to the original size.
      - 1
@@ -90,12 +92,22 @@ When creating the :py:class:`DeepInsight` class, some parameters can be modified
      - 'viridis', 'plasma', 'inferno', 'magma', 'cividis', 'Greys', etc.
    * - :py:data:`random_seed`
      - Seed for reproducibility.
-     - 23
+     - 1
      - integer
 
-Code example:
+PCA relevance options
+~~~~~~~~~~~~~~~~~~~~~
+
+With ``algorithm_rd='PCA'``, the absolute loadings of the first principal component are scaled and used as feature relevance scores. Two parameters can use these scores:
+
+* ``group_method='rev'`` computes a relevance-weighted average when multiple features occupy the same pixel.
+* ``relocate=True`` uses feature relevance in the assignment cost when relocating colliding features. The assignment algorithm is selected with ``algorithm_opt``.
+
+Code examples:
 
 >>> model = DeepInsight(image_dim=50, algorithm_rd='t-SNE', cmap='viridis', random_seed=42)
+>>> weighted_model = DeepInsight(image_dim=50, algorithm_rd='PCA', group_method='rev')
+>>> relocated_model = DeepInsight(image_dim=50, algorithm_rd='PCA', relocate=True)
 
 All the parameters that aren't specifically set will have their default values.
 
