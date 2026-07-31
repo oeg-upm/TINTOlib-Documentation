@@ -1,7 +1,7 @@
 IGTD
 ====
 
-The Image Generator for Tabular Data (IGTD) method transforms tabular data into images by arranging features according to their similarity. Initially, it creates a similarity matrix using techniques such as Pearson or Spearman correlation to evaluate the relationships between features. Subsequently, it computes a matrix that represents the spatial distances between pixel positions in the image. Finally, IGTD rearranges the features to ensure that the layout of the similarity matrix closely matches the spatial arrangement in the image, refining the placement iteratively.
+The Image Generator for Tabular Data (IGTD) method transforms tabular data into images by arranging features according to their similarity. Initially, it creates a feature-distance ranking using a correlation, statistical, geometric, or distribution-based measure. Subsequently, it computes a matrix that represents the spatial distances between pixel positions in the image. Finally, IGTD rearranges the features to ensure that the feature-distance ranking closely matches the spatial arrangement in the image, refining the placement iteratively.
 
 .. image:: https://raw.githubusercontent.com/oeg-upm/TINTOlib-Documentation/refs/heads/main/assets/Synthetic-images/IGTD_40x40_fEuclidean_iEuclidean_abs_000100_zoom.png
    :width: 200px
@@ -59,7 +59,7 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
    * - :py:data:`fea_dist_method`
      - Method to calculate pairwise distances between features.
      - 'Pearson'
-     - ['Pearson', 'Spearman', 'set', 'Euclidean']
+     - ['Pearson', 'Spearman', 'set', 'Euclidean', 'Wasserstein', 'Jensen', 'Geodesic', 'Tropical']
    * - :py:data:`image_dist_method`
      - Method to calculate distances between pixels in the image.
      - 'Euclidean'
@@ -101,9 +101,24 @@ When creating the :py:class:`IGTD` class, some parameters can be modified. The p
      - 1
      - integer
 
-Code example:
+Feature-distance methods
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+``fea_dist_method`` determines how relationships between columns are represented before IGTD optimizes their pixel positions:
+
+* ``Pearson`` and ``Spearman`` use linear and rank correlation, respectively.
+* ``set`` uses the Jaccard index and is intended for binary features without all-zero columns.
+* ``Euclidean`` uses the Euclidean distance between feature vectors.
+* ``Wasserstein`` compares the empirical distributions of pairs of features using the Wasserstein distance.
+* ``Jensen`` uses the Jensen-Shannon distance between feature vectors.
+* ``Geodesic`` embeds the features with Isomap and measures Euclidean distance in the resulting three-dimensional manifold representation.
+* ``Tropical`` uses tropical distance, which is based on the range of coordinate-wise differences between two feature vectors.
+
+Code examples:
 
 >>> model = IGTD(scale=[3,3], error="abs", val_step=60, cmap='viridis')
+>>> distribution_model = IGTD(fea_dist_method="Wasserstein")
+>>> manifold_model = IGTD(fea_dist_method="Geodesic")
 
 All the parameters that aren't specifically set will have their default values.
 
