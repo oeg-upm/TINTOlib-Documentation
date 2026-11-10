@@ -118,6 +118,17 @@ Code example:
 
 All the parameters that aren't specifically set will have their default values.
 
+.. warning::
+
+   Automatic selection with ``n_clusters='auto'`` can be computationally
+   expensive. For each candidate value, Clusters fits the selected algorithm
+   with six random seeds, generates intermediate images, and compares every
+   pair of seeds with SSIM. The default search therefore performs 42 model
+   fits before the final fit and can evaluate up to 10,000 samples per
+   candidate (2,000 for ``mixMethod``). This can substantially increase CPU
+   time and memory use. For large datasets, prefer an explicit value or a
+   short candidate list such as ``n_clusters=[16, 25, 36]``.
+
 Algorithm Notes
 ---------------
 
